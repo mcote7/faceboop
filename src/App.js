@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
 
-function App() {
+import { getAllUsers } from './server/api';
+
+import BoopNav from './components/BoopNav';
+
+
+const App = () => {
+  
+  const [users, setUsers] = useState([]);
+  
+  useEffect(()=> {
+    getAllUsers().then(res => {
+      setUsers(res);
+    });
+  },[]);
+  
+  useEffect(()=> {
+    console.log("users",users)
+  },[users]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="faceboop container-fluid">
+      <div className="row">
+        
+        <BoopNav/>
+        
+      </div>
     </div>
   );
-}
+};
 
 export default App;

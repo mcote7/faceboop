@@ -1,0 +1,35 @@
+@import './variables.scss';
+
+.boop-nav {
+  background-color: white;
+  position: fixed;
+  z-index: 1982;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.05);
+  
+  .logo {
+    position: relative;
+    color: white;
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient( hsl(210, 100%, 72%), hsl(210, 100%, 42%));
+      height: 1.4rem;
+      width: 1.4rem;
+      border-radius: 50%;
+      left: -0.25rem;
+    }
+    i {
+      font-size: 1.25rem;
+      position: relative;
+      top: 0.25rem;
+      left: 0.05rem;
+    }
+  }
+}
