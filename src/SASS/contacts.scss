@@ -1,14 +1,29 @@
 @import './variables.scss';
 
 .boop-contacts {
-  min-height: 100vh;
+  height: 100vh;
   width: 22.5rem;
   padding: 4.75rem 0 0.5rem 1rem;
-  position: relative;
+  position: fixed;
   top: 0;
   left: calc(100% - 22.5rem);
-  overflow-y: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: $boopScrollBarThumb;
+  scrollbar-track-color: $boopScrollBarTrack;
+  
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    border: 0.25rem solid $boopScrollBarTrack;
+    border-radius: 0.5rem;
+    background-color: $boopScrollBarThumb;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $boopScrollBarTrack;
+  }
   
   p {
     font-weight: 600;
@@ -17,7 +32,7 @@
   }
   
   .ad-cont {
-    border-bottom: 1px solid $boopDisabledTextColor;
+    border-bottom: 2px solid $boopDisabledTextColor;
     padding-bottom: 1rem;
     margin-bottom: 0.75rem;
     
@@ -54,21 +69,23 @@
   }
   
   .users-cont {
-    border-bottom: 1px solid $boopDisabledTextColor;
+    border-bottom: 2px solid $boopDisabledTextColor;
     padding-bottom: 1rem;
     margin-bottom: 0.75rem;
     
     .user-contact {
+      cursor: pointer;
       font-size: 0.9rem;
       font-weight: 600;
       color: $boopPrimaryTextColor;
       border-radius: 0.025rem;
       margin: 0.75rem 0;
       width: calc(100% - 0.5rem);
+      transition: 0.1s;
       
       &:hover {
-        background-color: rgba(0,0,0,0.05);
-        box-shadow: 0px 0px 0px 0.5rem rgba(0,0,0,0.05);
+        background-color: $boopItemHoverTrans;
+        box-shadow: 0px 0px 0px 0.5rem $boopItemHoverTrans;
       }
       
       img {
@@ -85,16 +102,18 @@
     margin-bottom: 0.75rem;
     
     .group-contact {
+      cursor: pointer;
       font-size: 0.9rem;
       font-weight: 600;
       color: $boopPrimaryTextColor;
       border-radius: 0.025rem;
       margin: 0.75rem 0;
       width: calc(100% - 0.5rem);
+      transition: 0.1s;
       
       &:hover {
-        background-color: rgba(0,0,0,0.05);
-        box-shadow: 0px 0px 0px 0.5rem rgba(0,0,0,0.05);
+        background-color: $boopItemHoverTrans;
+        box-shadow: 0px 0px 0px 0.5rem $boopItemHoverTrans;
         
         div {
           background-color: hsl(223deg, 15%, 85%);
