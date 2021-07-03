@@ -2,13 +2,16 @@
 
 .boop-nav {
   background-color: white;
+  padding-bottom: 1px;
+  padding-left: 1.25rem;
   position: fixed;
+  display: flex;
+  height: 3.55rem;
+  align-items: center;
   z-index: 1982;
   top: 0;
   left: 0;
   right: 0;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.05);
   
@@ -19,17 +22,18 @@
       content: '';
       position: absolute;
       z-index: -1;
-      background: linear-gradient( hsl(210, 100%, 72%), hsl(210, 100%, 42%));
-      height: 1.4rem;
-      width: 1.4rem;
+      background: $boopLogoGradient;
+      height: 2.5rem;
+      width: 2.5rem;
       border-radius: 50%;
       left: -0.25rem;
+      top: -0.1rem;
     }
     i {
-      font-size: 1.25rem;
+      font-size: 2.2rem;
       position: relative;
-      top: 0.25rem;
-      left: 0.05rem;
+      top: 0.4rem;
+      left: 0.35rem;
     }
   }
 }

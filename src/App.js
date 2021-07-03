@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { getAllUsers } from './server/api';
 
 import BoopNav from './components/BoopNav';
+import BoopContacts from './components/BoopContacts';
 
 
 const App = () => {
@@ -24,6 +25,8 @@ const App = () => {
       <div className="row">
         
         <BoopNav/>
+        
+        <BoopContacts users={users}/>
         
       </div>
     </div>

@@ -1,0 +1,122 @@
+@import './variables.scss';
+
+.boop-contacts {
+  min-height: 100vh;
+  width: 22.5rem;
+  padding: 4.75rem 0 0.5rem 1rem;
+  position: relative;
+  top: 0;
+  left: calc(100% - 22.5rem);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  
+  p {
+    font-weight: 600;
+    color: $boopSecondaryTextColor;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ad-cont {
+    border-bottom: 1px solid $boopDisabledTextColor;
+    padding-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    
+    .ad {
+      display: flex;
+      margin-top: 1rem;
+      text-decoration: none;
+      
+      img {
+        border-radius: 0.5rem;
+        margin-right: 0.75rem;
+      }
+      
+      .ad-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 11.5rem;
+        
+        div {
+          font-weight: 600;
+          color: $boopPrimaryTextColor;
+        }
+        
+        small {
+          font-size: 0.77rem;
+          color: $boopSecondaryTextColor;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+  
+  .users-cont {
+    border-bottom: 1px solid $boopDisabledTextColor;
+    padding-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    
+    .user-contact {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $boopPrimaryTextColor;
+      border-radius: 0.025rem;
+      margin: 0.75rem 0;
+      width: calc(100% - 0.5rem);
+      
+      &:hover {
+        background-color: rgba(0,0,0,0.05);
+        box-shadow: 0px 0px 0px 0.5rem rgba(0,0,0,0.05);
+      }
+      
+      img {
+        height: 2.25rem;
+        width: 2.25rem;
+        border-radius: 50%;
+        margin-right: 0.75rem;
+      }
+    }
+  }
+  
+  .group-cont {
+    padding-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    
+    .group-contact {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $boopPrimaryTextColor;
+      border-radius: 0.025rem;
+      margin: 0.75rem 0;
+      width: calc(100% - 0.5rem);
+      
+      &:hover {
+        background-color: rgba(0,0,0,0.05);
+        box-shadow: 0px 0px 0px 0.5rem rgba(0,0,0,0.05);
+        
+        div {
+          background-color: hsl(223deg, 15%, 85%);
+        }
+      }
+      
+      div {
+        display: inline-flex;
+        height: 2.25rem;
+        width: 2.25rem;
+        border-radius: 50%;
+        margin-right: 0.75rem;
+        background-color: $boopSecondaryButtonBackground;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 2rem;
+        
+        span {
+          position: relative;
+          top: 0.15rem;
+        }
+      }
+    }
+  }
+}
