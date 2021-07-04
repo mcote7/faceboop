@@ -42,18 +42,21 @@
     background-color: $boopScrollBarTrack;
   }
   
+  
   p {
     font-weight: 600;
     color: $boopSecondaryTextColor;
     margin-bottom: 0.5rem;
   }
   
+  // Advertisments ::: (never) => name a class ['ad', 'advert', 'sponsored']; {:injected agent stylesheet override:}
   .boop-spons-cont {
     border-bottom: 2px solid $boopDisabledTextColor;
     padding-bottom: 1rem;
     margin-bottom: 0.75rem;
     position: relative;
     
+    // border/overlay fix
     &::before {
       content: '';
       position: absolute;
@@ -96,6 +99,7 @@
     }
   }
   
+  // contacts start
   .contacts-title-row {
     display: flex;
     
@@ -171,6 +175,7 @@
       background-color: $boopBgColorMain;
     }
     
+    // mapped user =>
     .user-contact {
       cursor: pointer;
       font-size: 0.9rem;
@@ -194,6 +199,7 @@
     }
   }
   
+  // group
   .group-cont {
     
     .group-contact {
@@ -233,3 +239,4 @@
     }
   }
 }
+// 

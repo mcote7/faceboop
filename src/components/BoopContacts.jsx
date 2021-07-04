@@ -1,17 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { Adverts } from '../config/adverts';
 
 
 const BoopContacts = ({users}) => {
-  useEffect(()=> {
-    console.log("adverts? :::", Adverts)
-  })
+
   return (
     <div className="boop-contacts">
       <p>Sponsored</p>
+      
       <div className="boop-spons-cont">
-        {Adverts && [...Adverts].map((ad, idx) => {
+        {Adverts && Adverts.map((ad, idx) => {
           return(
             <a 
               key={idx} 
@@ -29,8 +28,10 @@ const BoopContacts = ({users}) => {
           );
         })}
       </div>
+      
       <div className="contacts-title-row">
         <p>Contacts</p>
+        
         <div className="contacts-options">
           <div className="new-room"><i className="fa fa-video-camera" aria-hidden="true"></i></div>
           <div className="search-messages"><i className="fa fa-search" aria-hidden="true"></i></div>
@@ -41,6 +42,7 @@ const BoopContacts = ({users}) => {
           </div>
         </div>
       </div>
+      
       <div className="users-cont">
         {users && users.map((user, idx) => {
           return(
@@ -54,7 +56,9 @@ const BoopContacts = ({users}) => {
           );
         })}
       </div>
+      
       <p>Group Conversations</p>
+      
       <div className="group-cont">
         <div className="group-contact">
           <div><span>+</span></div>
