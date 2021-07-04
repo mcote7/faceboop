@@ -3,7 +3,7 @@
 .boop-contacts {
   height: 100vh;
   width: 22.5rem;
-  padding: 4.75rem 0 0.5rem 1rem;
+  padding: 4.75rem 0 0.25rem 1rem;
   position: fixed;
   top: 0;
   left: calc(100% - 22.5rem);
@@ -195,8 +195,6 @@
   }
   
   .group-cont {
-    padding-bottom: 1rem;
-    margin-bottom: 0.75rem;
     
     .group-contact {
       cursor: pointer;
