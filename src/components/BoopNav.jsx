@@ -22,6 +22,7 @@ const BoopNav = () => {
         
         <div className="search-faceboop">
           <i className="fa fa-search" aria-hidden="true"></i>
+          {/* show modal on focus */}
           <input type="text" placeholder="Search Faceboop"/>
         </div>
         
@@ -32,10 +33,12 @@ const BoopNav = () => {
           
           <div className="search-mod-group">
             <div className="search-back">
+              {/* hide modal on click */}
               <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </div>
             <div className="search-faceboop">
               <i className="fa fa-search" aria-hidden="true"></i>
+              {/* hide modal on blur */}
               <input autoFocus type="text" placeholder="Search Faceboop"/>
             </div>
           </div>
