@@ -26,7 +26,18 @@ const BoopContacts = ({users}) => {
           );
         })}
       </div>
-      <p>Contacts</p>
+      <div className="contacts-title-row">
+        <p>Contacts</p>
+        <div className="contacts-options">
+          <div className="new-room"><i class="fa fa-video-camera" aria-hidden="true"></i></div>
+          <div className="search-messages"><i class="fa fa-search" aria-hidden="true"></i></div>
+          <div className="options">
+            <div className="dot"></div>
+            <div className="dot" style={{margin: '0 0.15rem'}}></div>
+            <div className="dot"></div>
+          </div>
+        </div>
+      </div>
       <div className="users-cont">
         {users && users.map((user, idx) => {
           return(
