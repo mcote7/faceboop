@@ -17,7 +17,7 @@
     overflow-y: overlay;
     
     // border-bottom vs. scrollbar fix
-    .ad-cont {
+    .boop-spons-cont {
       &::before {
         opacity: 0;
       }
@@ -48,7 +48,7 @@
     margin-bottom: 0.5rem;
   }
   
-  .ad-cont {
+  .boop-spons-cont {
     border-bottom: 2px solid $boopDisabledTextColor;
     padding-bottom: 1rem;
     margin-bottom: 0.75rem;
@@ -64,7 +64,7 @@
       background-color: $boopBgColorMain;
     }
     
-    .ad {
+    .boop-spons {
       display: flex;
       margin-top: 1rem;
       text-decoration: none;
@@ -74,7 +74,7 @@
         margin-right: 0.75rem;
       }
       
-      .ad-text {
+      .boop-spons-text {
         display: flex;
         flex-direction: column;
         justify-content: center;
