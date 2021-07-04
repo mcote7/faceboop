@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/faceboop/static/css/main.ccfd22fc.chunk.css",
-    "main.js": "/faceboop/static/js/main.37fa681b.chunk.js",
-    "main.js.map": "/faceboop/static/js/main.37fa681b.chunk.js.map",
-    "runtime-main.js": "/faceboop/static/js/runtime-main.6c649603.js",
-    "runtime-main.js.map": "/faceboop/static/js/runtime-main.6c649603.js.map",
+    "main.css": "/faceboop/static/css/main.e4781b9d.chunk.css",
+    "main.js": "/faceboop/static/js/main.5070eb3d.chunk.js",
+    "main.js.map": "/faceboop/static/js/main.5070eb3d.chunk.js.map",
+    "runtime-main.js": "/faceboop/static/js/runtime-main.7e0bdd07.js",
+    "runtime-main.js.map": "/faceboop/static/js/runtime-main.7e0bdd07.js.map",
     "static/css/2.d1628ef2.chunk.css": "/faceboop/static/css/2.d1628ef2.chunk.css",
-    "static/js/2.fb81f4f4.chunk.js": "/faceboop/static/js/2.fb81f4f4.chunk.js",
-    "static/js/2.fb81f4f4.chunk.js.map": "/faceboop/static/js/2.fb81f4f4.chunk.js.map",
-    "static/js/3.35acc17e.chunk.js": "/faceboop/static/js/3.35acc17e.chunk.js",
-    "static/js/3.35acc17e.chunk.js.map": "/faceboop/static/js/3.35acc17e.chunk.js.map",
+    "static/js/2.baac8b5a.chunk.js": "/faceboop/static/js/2.baac8b5a.chunk.js",
+    "static/js/2.baac8b5a.chunk.js.map": "/faceboop/static/js/2.baac8b5a.chunk.js.map",
+    "static/js/3.7c9e5c8c.chunk.js": "/faceboop/static/js/3.7c9e5c8c.chunk.js",
+    "static/js/3.7c9e5c8c.chunk.js.map": "/faceboop/static/js/3.7c9e5c8c.chunk.js.map",
     "index.html": "/faceboop/index.html",
     "static/css/2.d1628ef2.chunk.css.map": "/faceboop/static/css/2.d1628ef2.chunk.css.map",
-    "static/css/main.ccfd22fc.chunk.css.map": "/faceboop/static/css/main.ccfd22fc.chunk.css.map",
-    "static/js/2.fb81f4f4.chunk.js.LICENSE.txt": "/faceboop/static/js/2.fb81f4f4.chunk.js.LICENSE.txt",
+    "static/css/main.e4781b9d.chunk.css.map": "/faceboop/static/css/main.e4781b9d.chunk.css.map",
+    "static/js/2.baac8b5a.chunk.js.LICENSE.txt": "/faceboop/static/js/2.baac8b5a.chunk.js.LICENSE.txt",
     "static/media/font-awesome.css": "/faceboop/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.6c649603.js",
+    "static/js/runtime-main.7e0bdd07.js",
     "static/css/2.d1628ef2.chunk.css",
-    "static/js/2.fb81f4f4.chunk.js",
-    "static/css/main.ccfd22fc.chunk.css",
-    "static/js/main.37fa681b.chunk.js"
+    "static/js/2.baac8b5a.chunk.js",
+    "static/css/main.e4781b9d.chunk.css",
+    "static/js/main.5070eb3d.chunk.js"
   ]
 }
