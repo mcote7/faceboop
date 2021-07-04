@@ -6,6 +6,10 @@ const BoopNav = () => {
       <span className="logo">
         <i className="fa fa-facebook" aria-hidden="true"></i>
       </span>
+      <span className="search-faceboop">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="text" placeholder="Search Faceboop"/>
+      </span>
     </div>
   );
 };

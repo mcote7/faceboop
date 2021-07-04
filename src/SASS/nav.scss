@@ -18,6 +18,7 @@
   .logo {
     position: relative;
     color: white;
+    
     &::before {
       content: '';
       position: absolute;
@@ -29,11 +30,55 @@
       left: -0.25rem;
       top: -0.1rem;
     }
+    
     i {
       font-size: 2.2rem;
       position: relative;
       top: 0.4rem;
       left: 0.35rem;
+    }
+  }
+  
+  .search-faceboop {
+    margin-top: 1px;
+    margin-left: 1.5rem;
+    height: 2.5rem;
+    width: 14.5rem;
+    border-radius: 1.25rem;
+    background-color: $boopBgColorMain;
+    border: 2px solid $boopBgColorMain;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem 0 0.75rem;
+    
+    &:focus-within {
+      i {
+        transform: translateX(-1rem);
+        opacity: 0;
+      }
+    }
+    
+    i {
+      position: absolute;
+      color: $boopSecondaryTextColor;
+      margin-right: 0.25rem;
+      width: 1rem;
+      transition: 0.15s ease-in-out;
+    }
+    
+    input {
+      background: transparent;
+      border: none;
+      width: 11.25rem;
+      margin-left: 1.25rem;
+      transition: 0.15s ease-in-out;
+      
+      &:focus {
+        border: none;
+        outline: none;
+        width: 12.5rem;
+        margin-left: 0rem;
+      }
     }
   }
 }
