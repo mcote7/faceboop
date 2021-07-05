@@ -11,4 +11,7 @@
   @media only screen and (max-width: $boopBreakpoint2) {
     padding-right: 0rem;
   }
+  @media only screen and (max-width: $boopBreakpoint3) {
+    padding-right: var(--bs-gutter-x, 0.75rem);;
+  }
 }
