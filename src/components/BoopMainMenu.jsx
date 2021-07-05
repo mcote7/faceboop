@@ -15,7 +15,7 @@ const BoopMainMenu = () => {
         {MenuItemsA && MenuItemsA.map((item, idx) => {
           return(
             <div key={idx} className="user-contact">
-              <img src={item.imgSrc} alt="anon user"/>
+              <img src={item.imgSrc} alt="item"/>
               {item.title}
             </div>
           );
