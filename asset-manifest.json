@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/faceboop/static/css/main.fcaa1461.chunk.css",
-    "main.js": "/faceboop/static/js/main.bfd1a5df.chunk.js",
-    "main.js.map": "/faceboop/static/js/main.bfd1a5df.chunk.js.map",
+    "main.css": "/faceboop/static/css/main.926f8b22.chunk.css",
+    "main.js": "/faceboop/static/js/main.2f943dbe.chunk.js",
+    "main.js.map": "/faceboop/static/js/main.2f943dbe.chunk.js.map",
     "runtime-main.js": "/faceboop/static/js/runtime-main.6c649603.js",
     "runtime-main.js.map": "/faceboop/static/js/runtime-main.6c649603.js.map",
     "static/css/2.d1628ef2.chunk.css": "/faceboop/static/css/2.d1628ef2.chunk.css",
@@ -12,15 +12,37 @@
     "static/js/3.35acc17e.chunk.js.map": "/faceboop/static/js/3.35acc17e.chunk.js.map",
     "index.html": "/faceboop/index.html",
     "static/css/2.d1628ef2.chunk.css.map": "/faceboop/static/css/2.d1628ef2.chunk.css.map",
-    "static/css/main.fcaa1461.chunk.css.map": "/faceboop/static/css/main.fcaa1461.chunk.css.map",
+    "static/css/main.926f8b22.chunk.css.map": "/faceboop/static/css/main.926f8b22.chunk.css.map",
     "static/js/2.e1b2761f.chunk.js.LICENSE.txt": "/faceboop/static/js/2.e1b2761f.chunk.js.LICENSE.txt",
+    "static/media/001-mail inbox app.84090ed5.png": "/faceboop/static/media/001-mail inbox app.84090ed5.png",
+    "static/media/002-speech bubble.53f86c98.png": "/faceboop/static/media/002-speech bubble.53f86c98.png",
+    "static/media/004-camera.f8234a47.png": "/faceboop/static/media/004-camera.f8234a47.png",
+    "static/media/006-weather app.2f05372f.png": "/faceboop/static/media/006-weather app.2f05372f.png",
+    "static/media/007-clock.83df1292.png": "/faceboop/static/media/007-clock.83df1292.png",
+    "static/media/010-notes.602fdb58.png": "/faceboop/static/media/010-notes.602fdb58.png",
+    "static/media/014-music.0cf06354.png": "/faceboop/static/media/014-music.0cf06354.png",
+    "static/media/016-stock exchange app.1d29a745.png": "/faceboop/static/media/016-stock exchange app.1d29a745.png",
+    "static/media/018-calendar.e74e1cea.png": "/faceboop/static/media/018-calendar.e74e1cea.png",
+    "static/media/019-reminders.a7cb7839.png": "/faceboop/static/media/019-reminders.a7cb7839.png",
+    "static/media/020-video calling app.58823a3a.png": "/faceboop/static/media/020-video calling app.58823a3a.png",
+    "static/media/022-wallet passes app.a18305d2.png": "/faceboop/static/media/022-wallet passes app.a18305d2.png",
+    "static/media/023-app store.fa184fce.png": "/faceboop/static/media/023-app store.fa184fce.png",
+    "static/media/024-books.aa22ba3d.png": "/faceboop/static/media/024-books.aa22ba3d.png",
+    "static/media/026-tips.2a4db09f.png": "/faceboop/static/media/026-tips.2a4db09f.png",
+    "static/media/035-contacts.a9e0bdb8.png": "/faceboop/static/media/035-contacts.a9e0bdb8.png",
+    "static/media/038-like.822791c1.png": "/faceboop/static/media/038-like.822791c1.png",
+    "static/media/061-discord.b10318ea.png": "/faceboop/static/media/061-discord.b10318ea.png",
+    "static/media/063-slide show app.c454ddc3.png": "/faceboop/static/media/063-slide show app.c454ddc3.png",
+    "static/media/065-pages.efa02f44.png": "/faceboop/static/media/065-pages.efa02f44.png",
+    "static/media/066-spreadsheet app.7b64c22a.png": "/faceboop/static/media/066-spreadsheet app.7b64c22a.png",
+    "static/media/069-linkedin.48addedf.png": "/faceboop/static/media/069-linkedin.48addedf.png",
     "static/media/font-awesome.css": "/faceboop/static/media/fontawesome-webfont.f691f37e.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.6c649603.js",
     "static/css/2.d1628ef2.chunk.css",
     "static/js/2.e1b2761f.chunk.js",
-    "static/css/main.fcaa1461.chunk.css",
-    "static/js/main.bfd1a5df.chunk.js"
+    "static/css/main.926f8b22.chunk.css",
+    "static/js/main.2f943dbe.chunk.js"
   ]
 }
