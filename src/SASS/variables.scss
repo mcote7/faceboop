@@ -3,6 +3,12 @@ $test: '';
 $boopBlueMain: #1876f2;
 $boopLogoGradient: linear-gradient( hsl(192, 89%, 52%), $boopBlueMain, hsl(214, 89%, 44%));
 
+$boopRed: #f02849;
+$boopGreen: #45bd62;
+$boopYellow: #f7b928;
+$boopOrange: #f5533d;
+
+
 $boopPrimaryTextColor: #1C1E21;
 $boopSecondaryTextColor: #65676B;
 $boopInfoTextColor: #9c9fa3;
@@ -11,6 +17,7 @@ $boopDisabledTextColor: #CCD0D5;
 $boopBgColorMain: #f0f2f5;
 
 $boopSecondaryButtonBackground: #e4e6eb;
+$boopSecondaryButtonBackgroundHOV: #d3d6de;
 
 $boopScrollBarTrack: hsl(220, 15%, 92%);
 $boopScrollBarThumb: rgba(28, 30, 33, 0.22);

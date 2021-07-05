@@ -51,7 +51,7 @@
   
   // Advertisments ::: (never) => name a class ['ad', 'advert', 'sponsored']; {:injected agent stylesheet override:}
   .boop-spons-cont {
-    border-bottom: 2px solid $boopDisabledTextColor;
+    border-bottom: 1px solid $boopDisabledTextColor;
     padding-bottom: 1rem;
     margin-bottom: 0.75rem;
     position: relative;
@@ -117,7 +117,6 @@
         border-radius: 50%;
         background-color: transparent;
         margin: 0 0.25rem;
-        transition: 0.2s;
         
         &:hover {
           cursor: pointer;
@@ -160,7 +159,7 @@
   }
   
   .users-cont {
-    border-bottom: 2px solid $boopDisabledTextColor;
+    border-bottom: 1px solid $boopDisabledTextColor;
     padding-bottom: 1rem;
     margin-bottom: 0.75rem;
     position: relative;
@@ -216,7 +215,7 @@
         box-shadow: 0px 0px 0px 0.5rem $boopItemHoverTrans;
         
         div {
-          background-color: hsl(223deg, 15%, 85%);
+          background-color: $boopSecondaryButtonBackgroundHOV;
         }
       }
       

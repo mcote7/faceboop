@@ -1,5 +1,7 @@
 import React from 'react';
 
+import anonUserImg from '../assets/menuIcons/userAnon1.png';
+
 const BoopFeed = () => {
 
   return (
@@ -7,8 +9,8 @@ const BoopFeed = () => {
       
       <div className="post-form">
         <div className="post-input">
-          <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-          <input type="text" placeholder="Whats on your mind, Anonymous"/>
+          <img src={anonUserImg} alt="anon" />
+          <button>Whats on your mind, Anonymous?</button>
         </div>
         <hr />
         <div className="post-buttons">
