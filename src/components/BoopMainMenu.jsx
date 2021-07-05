@@ -1,0 +1,53 @@
+import React, { useState } from 'react';
+
+import { MenuItemsA } from '../config/menu';
+import {MenuItemsB} from '../config/menu';
+
+const BoopMainMenu = () => {
+
+  const [displayMore, setDisplayMore] = useState(false);
+  
+  return (
+    <div className="boop-main-menu">
+      
+      <div className="users-cont">
+        
+        {MenuItemsA && MenuItemsA.map((item, idx) => {
+          return(
+            <div key={idx} className="user-contact">
+              <img src={item.imgSrc} alt="contact"/>
+              {item.title}
+            </div>
+          );
+        })}
+        
+        {displayMore && MenuItemsB && MenuItemsB.map((item, idx) => {
+          return(
+            <div key={idx} className="user-contact">
+              <img src={item.imgSrc} alt="contact"/>
+              {item.title}
+            </div>
+          );
+        })}
+      </div>
+      
+      {!displayMore ?
+      <div onClick={()=>setDisplayMore(true)} className="group-cont">
+        <div className="group-contact">
+          <div><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+          See More
+        </div>
+      </div>
+      :
+      <div onClick={()=>setDisplayMore(false)} className="group-cont">
+        <div className="group-contact">
+          <div><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+          See Less
+        </div>
+      </div>
+      }
+    </div>
+  );
+};
+
+export default BoopMainMenu;

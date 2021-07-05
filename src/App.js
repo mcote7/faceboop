@@ -4,6 +4,7 @@ import { getAllUsers } from './server/api';
 
 import BoopNav from './components/BoopNav';
 import BoopContacts from './components/BoopContacts';
+import BoopMainMenu from './components/BoopMainMenu';
 
 
 const App = () => {
@@ -25,6 +26,8 @@ const App = () => {
       <div className="row">
         
         <BoopNav users={users}/>
+        
+        <BoopMainMenu/>
         
         <BoopContacts users={users}/>
         
