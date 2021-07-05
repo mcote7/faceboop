@@ -47,10 +47,7 @@ const BoopContacts = ({users}) => {
         {users && users.map((user, idx) => {
           return(
             <div key={idx} className="user-contact">
-              {idx % 2 === 0 ? 
-                <img src={`https://randomuser.me/api/portraits/thumb/women/${idx}.jpg`} alt="contact"/> :
-                <img src={`https://randomuser.me/api/portraits/thumb/men/${idx}.jpg`} alt="contact"/> }
-              
+              <img src={`https://randomuser.me/api/portraits/thumb/women/${user.id}.jpg`} alt="contact"/>
               {user.name}
             </div>
           );

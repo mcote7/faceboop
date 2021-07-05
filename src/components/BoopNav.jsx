@@ -61,20 +61,21 @@ const BoopNav = ({users}) => {
             </div>
             <div className="search-faceboop">
               <i className="fa fa-search" aria-hidden="true"></i>
-              {/* hide modal on blur onBlur={()=>hideSearch()} */}
-              <input autoFocus onChange={(e)=>searchUsers(e)} type="text" placeholder="Search Faceboop"/>
+              {/* 🧪 hide modal on blur  */}
+              <input autoFocus onChange={(e)=>searchUsers(e)} onBlur={()=>hideSearch()} type="text" placeholder="Search Faceboop"/>
             </div>
           </div>
           
           {searchUsersResult && searchUsersResult.length > 0 ? 
             searchUsersResult.map((user, idx)=> {
               return(
-                <div key={idx} className="user my-1">
+                <div key={idx} className="user-contact">
+                  <img src={`https://randomuser.me/api/portraits/thumb/women/${user.id}.jpg`} alt="contact"/>
                   {user.name}
                 </div>
               );
             })
-          : <div className="mt-auto">No recent searches</div>}
+          : <div className="mt-auto mb-2">No recent searches</div>}
           
         </div>
         
