@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: $boopBgColorMain!important;
   color: $boopPrimaryTextColor!important;
+  overflow-x: hidden!important;
 }
 
 code {

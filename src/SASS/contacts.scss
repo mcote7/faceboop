@@ -13,6 +13,10 @@
   scrollbar-color: $boopScrollBarThumb;
   scrollbar-track-color: $boopScrollBarTrack;
   
+  @media only screen and (max-width: $boopBreakpoint2) {
+    left: 100%;
+  }
+  
   &:hover {
     overflow-y: overlay;
     
