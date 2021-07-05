@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/faceboop/static/css/main.a5fb661f.chunk.css",
+    "main.css": "/faceboop/static/css/main.cc3b6c58.chunk.css",
     "main.js": "/faceboop/static/js/main.95832b83.chunk.js",
     "main.js.map": "/faceboop/static/js/main.95832b83.chunk.js.map",
     "runtime-main.js": "/faceboop/static/js/runtime-main.6c649603.js",
@@ -12,7 +12,7 @@
     "static/js/3.35acc17e.chunk.js.map": "/faceboop/static/js/3.35acc17e.chunk.js.map",
     "index.html": "/faceboop/index.html",
     "static/css/2.d1628ef2.chunk.css.map": "/faceboop/static/css/2.d1628ef2.chunk.css.map",
-    "static/css/main.a5fb661f.chunk.css.map": "/faceboop/static/css/main.a5fb661f.chunk.css.map",
+    "static/css/main.cc3b6c58.chunk.css.map": "/faceboop/static/css/main.cc3b6c58.chunk.css.map",
     "static/js/2.e1b2761f.chunk.js.LICENSE.txt": "/faceboop/static/js/2.e1b2761f.chunk.js.LICENSE.txt",
     "static/media/001-mail inbox app.84090ed5.png": "/faceboop/static/media/001-mail inbox app.84090ed5.png",
     "static/media/002-speech bubble.53f86c98.png": "/faceboop/static/media/002-speech bubble.53f86c98.png",
@@ -42,7 +42,7 @@
     "static/js/runtime-main.6c649603.js",
     "static/css/2.d1628ef2.chunk.css",
     "static/js/2.e1b2761f.chunk.js",
-    "static/css/main.a5fb661f.chunk.css",
+    "static/css/main.cc3b6c58.chunk.css",
     "static/js/main.95832b83.chunk.js"
   ]
 }
