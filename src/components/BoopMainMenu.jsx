@@ -46,6 +46,7 @@ const BoopMainMenu = () => {
         </div>
       </div>
       }
+      <small className="mt-auto">Faceboop &copy; 2021 | Michael P. Cote</small>
     </div>
   );
 };
