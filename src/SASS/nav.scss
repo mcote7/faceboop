@@ -89,7 +89,6 @@
 .recent-search {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   text-align: center;
   position: fixed;
   z-index: 2982;
@@ -98,8 +97,9 @@
   background-color: white;
   color: $boopInfoTextColor;
   width: 20rem;
-  height: 6.25rem;
-  padding-bottom: 0.25rem;
+  min-height: 6.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.75rem;
   padding-left: 0.25rem;
   padding-right: 1rem;
   font-size: 0.9rem;
@@ -110,6 +110,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-top: 1px;
     
     .search-back {
       display: flex;
@@ -137,7 +138,7 @@
     
     .search-faceboop {
       position: relative;
-      margin-top: 0px;
+      margin-top: -1px;
       margin-left: 0.25rem;
       height: 2.5rem;
       width: 16rem;
@@ -178,10 +179,13 @@
         &:focus {
           border: none;
           outline: none;
-          width: 12.5rem;
           margin-left: 0rem;
         }
       }
     }
+  }
+  
+  .search-results {
+    // 
   }
 }

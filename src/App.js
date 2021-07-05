@@ -24,7 +24,7 @@ const App = () => {
     <div className="faceboop container-fluid">
       <div className="row">
         
-        <BoopNav/>
+        <BoopNav users={users}/>
         
         <BoopContacts users={users}/>
         

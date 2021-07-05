@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const BoopNav = () => {
+const BoopNav = ({users}) => {
 
   const [displaySearch, setDisplaySearch] = useState(false);
   
@@ -10,7 +10,30 @@ const BoopNav = () => {
   
   const hideSearch = () => {
     setDisplaySearch(false);
+    setSearchUsersResult([]);
   };
+  
+  const [searchUsersResult, setSearchUsersResult] = useState([]);
+  
+  const searchUsers = (e) => {
+    let result = [];
+    let query = e.target.value;
+    if(e.target.value !== '') {
+      users.filter((user) => {
+        if(user.name.toUpperCase().includes(query.toUpperCase())) {
+          result.push(user);
+        }
+        return result;
+      })
+      setSearchUsersResult(result);
+    } else {
+      setSearchUsersResult([]);
+    }
+  };
+  
+  useEffect(()=> {
+    console.log("search results?", searchUsersResult)
+  }, [searchUsersResult]);
   
   return (
     <React.Fragment>
@@ -34,16 +57,25 @@ const BoopNav = () => {
           <div className="search-mod-group">
             {/* hide modal on click */}
             <div onClick={()=>hideSearch()} className="search-back">
-              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              <i className="fa fa-arrow-left" aria-hidden="true"></i>
             </div>
             <div className="search-faceboop">
               <i className="fa fa-search" aria-hidden="true"></i>
-              {/* hide modal on blur */}
-              <input autoFocus  type="text" placeholder="Search Faceboop"/>
+              {/* hide modal on blur onBlur={()=>hideSearch()} */}
+              <input autoFocus onChange={(e)=>searchUsers(e)} type="text" placeholder="Search Faceboop"/>
             </div>
           </div>
           
-          No recent searches
+          {searchUsersResult && searchUsersResult.length > 0 ? 
+            searchUsersResult.map((user, idx)=> {
+              return(
+                <div key={idx} className="user my-1">
+                  {user.name}
+                </div>
+              );
+            })
+          : <div className="mt-auto">No recent searches</div>}
+          
         </div>
         
       :''}
