@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/faceboop/static/css/main.e334a1ec.chunk.css",
-    "main.js": "/faceboop/static/js/main.4e67c18f.chunk.js",
-    "main.js.map": "/faceboop/static/js/main.4e67c18f.chunk.js.map",
+    "main.css": "/faceboop/static/css/main.25c881af.chunk.css",
+    "main.js": "/faceboop/static/js/main.bfd1a5df.chunk.js",
+    "main.js.map": "/faceboop/static/js/main.bfd1a5df.chunk.js.map",
     "runtime-main.js": "/faceboop/static/js/runtime-main.6c649603.js",
     "runtime-main.js.map": "/faceboop/static/js/runtime-main.6c649603.js.map",
     "static/css/2.d1628ef2.chunk.css": "/faceboop/static/css/2.d1628ef2.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.35acc17e.chunk.js.map": "/faceboop/static/js/3.35acc17e.chunk.js.map",
     "index.html": "/faceboop/index.html",
     "static/css/2.d1628ef2.chunk.css.map": "/faceboop/static/css/2.d1628ef2.chunk.css.map",
-    "static/css/main.e334a1ec.chunk.css.map": "/faceboop/static/css/main.e334a1ec.chunk.css.map",
+    "static/css/main.25c881af.chunk.css.map": "/faceboop/static/css/main.25c881af.chunk.css.map",
     "static/js/2.e1b2761f.chunk.js.LICENSE.txt": "/faceboop/static/js/2.e1b2761f.chunk.js.LICENSE.txt",
     "static/media/font-awesome.css": "/faceboop/static/media/fontawesome-webfont.f691f37e.woff"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.6c649603.js",
     "static/css/2.d1628ef2.chunk.css",
     "static/js/2.e1b2761f.chunk.js",
-    "static/css/main.e334a1ec.chunk.css",
-    "static/js/main.4e67c18f.chunk.js"
+    "static/css/main.25c881af.chunk.css",
+    "static/js/main.bfd1a5df.chunk.js"
   ]
 }
