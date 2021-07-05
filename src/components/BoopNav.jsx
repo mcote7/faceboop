@@ -34,6 +34,8 @@ const BoopNav = ({users}) => {
   useEffect(()=> {
     console.log("search results?", searchUsersResult)
   }, [searchUsersResult]);
+
+  // 
   
   return (
     <React.Fragment>
@@ -47,6 +49,11 @@ const BoopNav = ({users}) => {
           <i className="fa fa-search" aria-hidden="true"></i>
           {/* show modal on focus */}
           <input onFocus={()=>showSearch()} type="text" placeholder="Search Faceboop"/>
+        </div>
+        
+        {/* hamburger menus */}
+        <div className="nav-mobile-menus ms-auto">
+          <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
         
       </div>

@@ -82,6 +82,23 @@
       }
     }
   }
+  
+  .nav-mobile-menus {
+    display: flex;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.75rem;
+    
+    &:hover {
+      background-color: $boopItemHoverTrans;
+    }
+    
+    .fa-bars {
+      font-size: 2rem;
+      color: $boopSecondaryTextColor;
+    }
+  }
 }
 
 // on input focus displays this modal =>
