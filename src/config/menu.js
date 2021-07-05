@@ -27,7 +27,7 @@ import img22 from '../assets/menuIcons/069-linkedin.png';
 export const MenuItemsA = [
   {
     title: 'Placeholder Links',
-    imgSrc: img1
+    imgSrc: img22
   },
   {
     title: 'Meetings',
@@ -115,6 +115,6 @@ export const MenuItemsB = [
   },
   {
     title: 'LinkedInit',
-    imgSrc: img22
+    imgSrc: img1
   },
 ];
