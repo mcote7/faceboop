@@ -1,3 +1,4 @@
+import img0 from '../assets/menuIcons/userAnon1.png';
 import img1 from '../assets/menuIcons/001-mail inbox app.png';
 import img2 from '../assets/menuIcons/002-speech bubble.png';
 import img3 from '../assets/menuIcons/004-camera.png';
@@ -25,6 +26,10 @@ import img22 from '../assets/menuIcons/069-linkedin.png';
 
 // (11)
 export const MenuItemsA = [
+  {
+    title: 'Anonymous User',
+    imgSrc: img0
+  },
   {
     title: 'Placeholder Links',
     imgSrc: img22
@@ -54,16 +59,8 @@ export const MenuItemsA = [
     imgSrc: img7
   },
   {
-    title: 'Stock Watch',
-    imgSrc: img8
-  },
-  {
     title: 'Calender',
     imgSrc: img9
-  },
-  {
-    title: 'Reminders',
-    imgSrc: img10
   },
   {
     title: 'Video Call',
@@ -71,8 +68,16 @@ export const MenuItemsA = [
   },
 ];
 
-// (11)
+// (13)
 export const MenuItemsB = [
+  {
+    title: 'Reminders',
+    imgSrc: img10
+  },
+  {
+    title: 'Stock Watch',
+    imgSrc: img8
+  },
   {
     title: 'Your Wallet',
     imgSrc: img12
