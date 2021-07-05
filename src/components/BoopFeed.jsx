@@ -8,7 +8,7 @@ const BoopFeed = () => {
       <div className="post-form">
         <div className="post-input">
           <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-          <input type="text" />
+          <input type="text" placeholder="Whats on your mind, Anonymous"/>
         </div>
         <hr />
         <div className="post-buttons">
