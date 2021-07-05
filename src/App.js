@@ -5,6 +5,7 @@ import { getAllUsers } from './server/api';
 import BoopNav from './components/BoopNav';
 import BoopContacts from './components/BoopContacts';
 import BoopMainMenu from './components/BoopMainMenu';
+import BoopFeed from './components/BoopFeed';
 
 
 const App = () => {
@@ -28,6 +29,8 @@ const App = () => {
         <BoopNav users={users}/>
         
         <BoopMainMenu/>
+        
+        <BoopFeed/>
         
         <BoopContacts users={users}/>
         
