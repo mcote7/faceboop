@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 
 const BoopNav = () => {
 
-  const [displaySearch, setDisplaySearch] = useState(true);
+  const [displaySearch, setDisplaySearch] = useState(false);
   
-  // const showSearch = () => {
-  //   setDisplaySearch(true);
-  // };
+  const showSearch = () => {
+    setDisplaySearch(true);
+  };
   
-  // const hideSearch = () => {
-  //   setDisplaySearch(false);
-  // };
+  const hideSearch = () => {
+    setDisplaySearch(false);
+  };
   
   return (
     <React.Fragment>
@@ -23,7 +23,7 @@ const BoopNav = () => {
         <div className="search-faceboop">
           <i className="fa fa-search" aria-hidden="true"></i>
           {/* show modal on focus */}
-          <input type="text" placeholder="Search Faceboop"/>
+          <input onFocus={()=>showSearch()} type="text" placeholder="Search Faceboop"/>
         </div>
         
       </div>
@@ -32,14 +32,14 @@ const BoopNav = () => {
         <div className="recent-search">
           
           <div className="search-mod-group">
-            <div className="search-back">
-              {/* hide modal on click */}
+            {/* hide modal on click */}
+            <div onClick={()=>hideSearch()} className="search-back">
               <i class="fa fa-arrow-left" aria-hidden="true"></i>
             </div>
             <div className="search-faceboop">
               <i className="fa fa-search" aria-hidden="true"></i>
               {/* hide modal on blur */}
-              <input autoFocus type="text" placeholder="Search Faceboop"/>
+              <input autoFocus  type="text" placeholder="Search Faceboop"/>
             </div>
           </div>
           
