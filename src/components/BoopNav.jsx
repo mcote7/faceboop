@@ -54,6 +54,12 @@ const BoopNav = ({users}) => {
     hideMenus();
   };
   
+  const showContacts = () => {
+    const target = document.getElementById('contacts-menu');
+    target.classList.add('show-contacts');
+    hideMenus();
+  };
+  
   
   return (
     <React.Fragment>
@@ -87,7 +93,7 @@ const BoopNav = ({users}) => {
             Main Menu
           </div>
           
-          <div className="contacts-link">
+          <div onClick={()=>showContacts()} className="contacts-link">
             <img src={contactsImg} alt="contact"/>
             Contacts
           </div>

@@ -5,8 +5,18 @@ import { Adverts } from '../config/adverts';
 
 const BoopContacts = ({users}) => {
 
+  const hideContacts = (e) => {
+    const target = document.getElementById('contacts-menu');
+    target.classList.remove('show-contacts');
+  };
+
   return (
-    <div className="boop-contacts">
+    <div id="contacts-menu" className="boop-contacts">
+      
+      <div onClick={()=>hideContacts()} className="close-contacts">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      
       <p>Sponsored</p>
       
       <div className="boop-spons-cont">
