@@ -19,6 +19,7 @@
     &.show-contacts {
       left: calc(100% - 22.5rem);
       box-shadow: 0px 6px 8px 0px $boopBoxShaddowColor;
+      padding-top: 3rem;
     }
   }
   
@@ -53,10 +54,10 @@
   
   .close-contacts {
     display: none;
-    @media only screen and (max-width: $boopBreakpoint1) {
+    @media only screen and (max-width: $boopBreakpoint2) {
       position: absolute;
-      margin-top: -1rem;
-      left: 0.25rem;
+      margin-top: -2.25rem;
+      left: 1.25rem;
       display: inline-flex;
       height: 2.25rem;
       width: 2.25rem;

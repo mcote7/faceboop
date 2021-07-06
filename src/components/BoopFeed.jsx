@@ -5,7 +5,7 @@ import anonUserImg from '../assets/menuIcons/userAnon1.png';
 const BoopFeed = () => {
 
   return (
-    <div className="boop-feed">
+    <div className="boop-feed mx-auto">
       
       <div className="post-form">
         <div className="post-input">
