@@ -6,7 +6,9 @@
   height: 100vh;
   width: 22.5rem;
   padding: 4.25rem 0 0.25rem 1rem;
+  background-color: $boopBgColorMain;
   position: fixed;
+  z-index: 1980;
   top: 0;
   right: calc(100% - 22.5rem);
   overflow-x: hidden;
@@ -17,6 +19,9 @@
   
   @media only screen and (max-width: $boopBreakpoint1) {
     right: 100%;
+    &.show-main {
+      right: calc(100% - 22.5rem);
+    }
   }
   
   &:hover {
@@ -43,6 +48,27 @@
     background-color: $boopScrollBarTrack;
   }
   
+  .close-main {
+    display: none;
+    @media only screen and (max-width: $boopBreakpoint1) {
+      // display: block;
+      position: absolute;
+      right: 0;
+      display: inline-flex;
+      height: 2.25rem;
+      width: 2.25rem;
+      border-radius: 50%;
+      margin-right: 0.25rem;
+      background-color: $boopSecondaryButtonBackground;
+      justify-content: center;
+      align-items: center;
+      
+      &:hover {
+        cursor: pointer;
+        background-color: $boopSecondaryButtonBackgroundHOV;
+      }
+    }
+  }
   
   p {
     font-weight: 600;
@@ -50,10 +76,10 @@
     margin-bottom: 0.5rem;
   }
   
-  .users-cont {
+  .main-menu-cont {
     
     // mapped user =>
-    .user-contact {
+    .main-menu-item {
       cursor: pointer;
       font-size: 0.9rem;
       font-weight: 600;
@@ -77,9 +103,9 @@
     }
   }
   
-  .group-cont {
+  .main-menu-opt {
     
-    .group-contact {
+    .menu-opt {
       cursor: pointer;
       font-size: 0.9rem;
       font-weight: 600;

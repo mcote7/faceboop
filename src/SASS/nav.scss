@@ -107,6 +107,84 @@
 }
 
 // on input focus displays this modal =>
+.menu-menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: fixed;
+  z-index: 2982;
+  top: 0;
+  right: 0;
+  background-color: white;
+  color: $boopInfoTextColor;
+  width: 20rem;
+  min-height: 6.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 1rem;
+  font-size: 0.9rem;
+  border-radius:0 0 0.5rem 0.5rem;
+  box-shadow: 0px 12px 12px 0px $boopBoxShaddowColor;
+  
+  .search-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 50%;
+    background-color: transparent;
+    margin-left: 0.25rem;
+    
+    &:hover {
+      cursor: pointer;
+      background-color: $boopItemHoverTrans;
+    }
+    
+    i {
+      height: 1rem;
+      width: 1rem;
+      font-size: 1rem;
+      color: $boopSecondaryTextColor;
+    }
+  }
+  
+  .main-menu-link, .contacts-link {
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $boopPrimaryTextColor;
+    border-radius: 0.025rem;
+    margin: 0.75rem 0;
+    margin-left: 0.75rem;
+    display: flex;
+    align-items: center;
+    
+    &:hover {
+      background-color: $boopItemHoverTransWhiteBG;
+      box-shadow: 0px 0px 0px 0.5rem $boopItemHoverTransWhiteBG;
+    }
+    
+    img {
+      height: 2.25rem;
+      width: 2.25rem;
+      margin-right: 0.75rem;
+      filter: grayscale(1);
+    }
+  }
+  
+  .main-menu-link {
+    // 
+  }
+  
+  .contacts-link {
+    display: none;
+    @media only screen and (max-width: $boopBreakpoint2) {
+      display: flex;
+    }
+  }
+}
 
 .recent-search {
   display: flex;
@@ -143,7 +221,6 @@
       width: 2.25rem;
       border-radius: 50%;
       background-color: transparent;
-      transition: 0.2s;
       
       &:hover {
         cursor: pointer;

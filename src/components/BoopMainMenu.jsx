@@ -7,14 +7,23 @@ const BoopMainMenu = () => {
 
   const [displayMore, setDisplayMore] = useState(false);
   
+  const hideMainMenu = (e) => {
+    const target = document.getElementById('main-menu');
+    target.classList.remove('show-main');
+  };
+  
   return (
-    <div className="boop-main-menu">
+    <div id="main-menu" className="boop-main-menu">
       
-      <div className="users-cont">
+      <div onClick={()=>hideMainMenu()} className="close-main">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+      
+      <div className="main-menu-cont">
         
         {MenuItemsA && MenuItemsA.map((item, idx) => {
           return(
-            <div key={idx} className="user-contact">
+            <div key={idx} className="main-menu-item">
               <img src={item.imgSrc} alt="item"/>
               {item.title}
             </div>
@@ -23,7 +32,7 @@ const BoopMainMenu = () => {
         
         {displayMore && MenuItemsB && MenuItemsB.map((item, idx) => {
           return(
-            <div key={idx} className="user-contact">
+            <div key={idx} className="main-menu-item">
               <img src={item.imgSrc} alt="item"/>
               {item.title}
             </div>
@@ -32,16 +41,16 @@ const BoopMainMenu = () => {
       </div>
       
       {!displayMore ?
-      <div onClick={()=>setDisplayMore(true)} className="group-cont">
-        <div className="group-contact">
-          <div><i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+      <div onClick={()=>setDisplayMore(true)} className="main-menu-opt">
+        <div className="menu-opt">
+          <div><i className="fa fa-chevron-down" aria-hidden="true"></i></div>
           See More
         </div>
       </div>
       :
-      <div onClick={()=>setDisplayMore(false)} className="group-cont">
-        <div className="group-contact">
-          <div><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+      <div onClick={()=>setDisplayMore(false)} className="main-menu-opt">
+        <div className="menu-opt">
+          <div><i className="fa fa-chevron-up" aria-hidden="true"></i></div>
           See Less
         </div>
       </div>

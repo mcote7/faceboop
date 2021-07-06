@@ -15,15 +15,15 @@ const BoopFeed = () => {
         <hr />
         <div className="post-buttons">
           <button>
-            <i class="fa fa-video-camera" aria-hidden="true"></i>
+            <i className="fa fa-video-camera" aria-hidden="true"></i>
             Live Video
           </button>
           <button>
-            <i class="fa fa-picture-o" aria-hidden="true"></i>
+            <i className="fa fa-picture-o" aria-hidden="true"></i>
             Photo/Video
           </button>
           <button>
-            <i class="fa fa-smile-o" aria-hidden="true"></i>
+            <i className="fa fa-smile-o" aria-hidden="true"></i>
             Feeling/Activity
           </button>
         </div>

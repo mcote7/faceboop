@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
+import mainImg from '../assets/misc/mainMenu.png';
+import contactsImg from '../assets/misc/contacts.png';
+
 const BoopNav = ({users}) => {
 
   const [displaySearch, setDisplaySearch] = useState(false);
@@ -35,7 +38,22 @@ const BoopNav = ({users}) => {
     console.log("search results?", searchUsersResult)
   }, [searchUsersResult]);
 
-  // 
+  const [displayMenus, setDisplayMenus] = useState(false);
+  
+  const showMenus = () => {
+    setDisplayMenus(true);
+  };
+  
+  const hideMenus = () => {
+    setDisplayMenus(false);
+  };
+  
+  const showMainMenu = () => {
+    const target = document.getElementById('main-menu');
+    target.classList.add('show-main');
+    hideMenus();
+  };
+  
   
   return (
     <React.Fragment>
@@ -52,11 +70,30 @@ const BoopNav = ({users}) => {
         </div>
         
         {/* hamburger menus */}
-        <div className="nav-mobile-menus ms-auto">
-          <i class="fa fa-bars" aria-hidden="true"></i>
+        <div onClick={()=>showMenus()} className="nav-mobile-menus ms-auto">
+          <i className="fa fa-bars" aria-hidden="true"></i>
         </div>
         
       </div>
+      
+      {displayMenus ?
+        <div className="menu-menu">
+          <div onClick={()=>hideMenus()} className="search-back">
+            <i className="fa fa-arrow-left" aria-hidden="true"></i>
+          </div>
+          
+          <div onClick={()=>showMainMenu()} className="main-menu-link">
+            <img src={mainImg} alt="main"/>
+            Main Menu
+          </div>
+          
+          <div className="contacts-link">
+            <img src={contactsImg} alt="contact"/>
+            Contacts
+          </div>
+          
+        </div>
+      :''}
       
       {displaySearch ?
         <div className="recent-search">
