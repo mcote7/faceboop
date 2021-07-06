@@ -90,9 +90,14 @@
     border-radius: 0.5rem;
     padding: 0.5rem 1.75rem;
     opacity: 0;
+    margin-left: auto;
     
     @media only screen and (max-width: $boopBreakpoint1) {
       opacity: 1;
+    }
+    @media only screen and (max-width: $boopBreakpoint3) {
+      margin-left: 1.75rem;
+      padding: 0;
     }
     
     &:hover {

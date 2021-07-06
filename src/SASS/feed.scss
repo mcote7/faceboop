@@ -7,7 +7,7 @@
   width: calc(100% - 45rem);
   
   @media only screen and (max-width: $boopBreakpoint1) {
-    width: calc(100%);
+    width: 100%;
   }
   
   .post-form {

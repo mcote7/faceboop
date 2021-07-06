@@ -76,7 +76,7 @@ const BoopNav = ({users}) => {
         </div>
         
         {/* hamburger menus */}
-        <div onClick={()=>showMenus()} className="nav-mobile-menus ms-auto">
+        <div onClick={()=>showMenus()} className="nav-mobile-menus">
           <i className="fa fa-bars" aria-hidden="true"></i>
         </div>
         
