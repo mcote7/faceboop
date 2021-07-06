@@ -18,6 +18,7 @@
     left: 100%;
     &.show-contacts {
       left: calc(100% - 22.5rem);
+      box-shadow: 0px 6px 8px 0px $boopBoxShaddowColor;
     }
   }
   
