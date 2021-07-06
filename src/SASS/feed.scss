@@ -101,6 +101,8 @@
         
         .fa-video-camera {
           position: relative;
+          display: flex;
+          align-items: center;
           color: $boopRed;
           margin-right: 0.5rem;
           transform: scaleY(1.1);
@@ -109,10 +111,9 @@
             content: '\f06e';
             color: white;
             position: absolute;
-            left: 3px;
-            top: 6px;
             font-size: 0.7rem;
             font-weight: bold;
+            margin-left: 0.2rem;
           }
         }
         
