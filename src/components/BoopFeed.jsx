@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import * as moment from 'moment';
+
 import anonUserImg from '../assets/menuIcons/userAnon1.png';
 
 const BoopFeed = ({users, posts}) => {
@@ -9,6 +11,17 @@ const BoopFeed = ({users, posts}) => {
   const showMorePosts = () => {
     setPostLimit(postLimit + 6);
   };
+
+  const randomDate = (start, end) => {
+    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+  };
+
+  const getNewRandDate = () => {
+    const randDate = randomDate(new Date(2012, 0, 1), new Date());
+    const target = moment(randDate).format('MMMM D YYYY @ h:mm A');
+    return target;
+  };
+
 
   return (
     <div className="boop-feed mx-auto">
@@ -42,7 +55,10 @@ const BoopFeed = ({users, posts}) => {
             
             <div className="post-user">
               <img src={`https://randomuser.me/api/portraits/thumb/women/${users[post.userId].id}.jpg`} alt="contact"/>
-              {users[post.userId].name}
+              <div className="user-title">
+                {users[post.userId].name}
+                <small>{getNewRandDate()} &bull; <i className="fa fa-globe" aria-hidden="true"></i></small>
+              </div>
             </div>
             
             <img src={`https://source.unsplash.com/collection/${idx}/200x200/?space`} alt="post img" />
