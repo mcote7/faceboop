@@ -62,8 +62,9 @@ const BoopFeed = ({users, posts}) => {
             </div>
             
             <img src={`https://source.unsplash.com/collection/${idx}/200x200/?space`} alt="post img" />
-            
-            {post.title}
+            <div className="post-img-title">
+              {post.title}
+            </div>
             
           </div> : ''
         );
