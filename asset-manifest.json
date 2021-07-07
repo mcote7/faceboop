@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/faceboop/static/css/main.cfb04bcc.chunk.css",
-    "main.js": "/faceboop/static/js/main.09aa43a0.chunk.js",
-    "main.js.map": "/faceboop/static/js/main.09aa43a0.chunk.js.map",
-    "runtime-main.js": "/faceboop/static/js/runtime-main.6c649603.js",
-    "runtime-main.js.map": "/faceboop/static/js/runtime-main.6c649603.js.map",
+    "main.css": "/faceboop/static/css/main.7e9226de.chunk.css",
+    "main.js": "/faceboop/static/js/main.6d32ef01.chunk.js",
+    "main.js.map": "/faceboop/static/js/main.6d32ef01.chunk.js.map",
+    "runtime-main.js": "/faceboop/static/js/runtime-main.0edcf9f4.js",
+    "runtime-main.js.map": "/faceboop/static/js/runtime-main.0edcf9f4.js.map",
     "static/css/2.d1628ef2.chunk.css": "/faceboop/static/css/2.d1628ef2.chunk.css",
-    "static/js/2.e1b2761f.chunk.js": "/faceboop/static/js/2.e1b2761f.chunk.js",
-    "static/js/2.e1b2761f.chunk.js.map": "/faceboop/static/js/2.e1b2761f.chunk.js.map",
-    "static/js/3.35acc17e.chunk.js": "/faceboop/static/js/3.35acc17e.chunk.js",
-    "static/js/3.35acc17e.chunk.js.map": "/faceboop/static/js/3.35acc17e.chunk.js.map",
+    "static/js/2.391dbdc3.chunk.js": "/faceboop/static/js/2.391dbdc3.chunk.js",
+    "static/js/2.391dbdc3.chunk.js.map": "/faceboop/static/js/2.391dbdc3.chunk.js.map",
+    "static/js/3.8de2734f.chunk.js": "/faceboop/static/js/3.8de2734f.chunk.js",
+    "static/js/3.8de2734f.chunk.js.map": "/faceboop/static/js/3.8de2734f.chunk.js.map",
     "index.html": "/faceboop/index.html",
     "static/css/2.d1628ef2.chunk.css.map": "/faceboop/static/css/2.d1628ef2.chunk.css.map",
-    "static/css/main.cfb04bcc.chunk.css.map": "/faceboop/static/css/main.cfb04bcc.chunk.css.map",
-    "static/js/2.e1b2761f.chunk.js.LICENSE.txt": "/faceboop/static/js/2.e1b2761f.chunk.js.LICENSE.txt",
+    "static/css/main.7e9226de.chunk.css.map": "/faceboop/static/css/main.7e9226de.chunk.css.map",
+    "static/js/2.391dbdc3.chunk.js.LICENSE.txt": "/faceboop/static/js/2.391dbdc3.chunk.js.LICENSE.txt",
     "static/media/001-mail inbox app.84090ed5.png": "/faceboop/static/media/001-mail inbox app.84090ed5.png",
     "static/media/002-speech bubble.53f86c98.png": "/faceboop/static/media/002-speech bubble.53f86c98.png",
     "static/media/004-camera.f8234a47.png": "/faceboop/static/media/004-camera.f8234a47.png",
@@ -41,10 +41,10 @@
     "static/media/mainMenu.5c22b2bf.png": "/faceboop/static/media/mainMenu.5c22b2bf.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6c649603.js",
+    "static/js/runtime-main.0edcf9f4.js",
     "static/css/2.d1628ef2.chunk.css",
-    "static/js/2.e1b2761f.chunk.js",
-    "static/css/main.cfb04bcc.chunk.css",
-    "static/js/main.09aa43a0.chunk.js"
+    "static/js/2.391dbdc3.chunk.js",
+    "static/css/main.7e9226de.chunk.css",
+    "static/js/main.6d32ef01.chunk.js"
   ]
 }
