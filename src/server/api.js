@@ -7,3 +7,10 @@ export const getAllUsers = () => {
     });
 };
 
+export const getAllPost = () => {
+  return fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'})
+  .then(res => res.json())
+  .then(data => {
+    return data;
+  });
+};

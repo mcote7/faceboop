@@ -16,7 +16,7 @@ const BoopMainMenu = () => {
     <div id="main-menu" className="boop-main-menu">
       
       <div onClick={()=>hideMainMenu()} className="close-main">
-        <i class="fa fa-times" aria-hidden="true"></i>
+        <i className="fa fa-times" aria-hidden="true"></i>
       </div>
       
       <div className="main-menu-cont">

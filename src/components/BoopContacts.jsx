@@ -14,7 +14,7 @@ const BoopContacts = ({users}) => {
     <div id="contacts-menu" className="boop-contacts">
       
       <div onClick={()=>hideContacts()} className="close-contacts">
-        <i class="fa fa-times" aria-hidden="true"></i>
+        <i className="fa fa-times" aria-hidden="true"></i>
       </div>
       
       <p>Sponsored</p>

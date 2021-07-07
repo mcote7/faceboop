@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import anonUserImg from '../assets/menuIcons/userAnon1.png';
 
-const BoopFeed = () => {
+const BoopFeed = ({users, posts}) => {
+
+  const [postLimit, setPostLimit] = useState(6);
+
+  const showMorePosts = () => {
+    setPostLimit(postLimit + 6);
+  };
 
   return (
     <div className="boop-feed mx-auto">
@@ -29,6 +35,25 @@ const BoopFeed = () => {
         </div>
       </div>
       
+      {posts && posts.map((post, idx)=> {
+        return(
+          idx < postLimit ?
+          <div key={idx} className="boop-post">
+            
+            <div className="post-user">
+              <img src={`https://randomuser.me/api/portraits/thumb/women/${users[post.userId].id}.jpg`} alt="contact"/>
+              {users[post.userId].name}
+            </div>
+            
+            <img src={`https://source.unsplash.com/collection/${idx}/200x200/?space`} alt="post img" />
+            
+            {post.title}
+            
+          </div> : ''
+        );
+      })}
+      
+      <button onClick={()=>showMorePosts()} className="show-more-posts">Show More &darr;</button>
     </div>
   );
 };

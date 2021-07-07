@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   padding: 6rem 0rem;
-  width: calc(100% - 45rem);
+  // width: calc(100% - 45rem);
+  justify-content: center;
+  align-items: center;
   
   @media only screen and (max-width: $boopBreakpoint1) {
     width: 100%;
@@ -13,11 +15,12 @@
   .post-form {
     width: 100%;
     max-width: 42.5rem;
-    margin: 0 auto;
     background-color: white;
     color: $boopPrimaryTextColor;
     border-radius: 0.5rem;
     padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    margin-top: 0;
     box-shadow: 0px 1px 0px 1px $boopItemHoverTransWhiteBG;
     
     @media only screen and (max-width: $boopBreakpoint0) {
@@ -126,6 +129,52 @@
           transform: scale(1.2);
         }
       }
+    }
+  }
+  
+  .boop-post {
+    width: 100%;
+    max-width: 42.5rem;
+    background-color: white;
+    color: $boopPrimaryTextColor;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    box-shadow: 0px 1px 0px 1px $boopItemHoverTransWhiteBG;
+    
+    @media only screen and (max-width: $boopBreakpoint0) {
+      max-width: 36.875rem;
+    }
+    @media only screen and (max-width: $boopBreakpoint3) {
+      width: 100%;
+    }
+    
+    .post-user {
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $boopPrimaryTextColor;
+      border-radius: 0.025rem;
+      margin: 0.75rem 0;
+      width: calc(100% - 1.25rem);
+      
+      &:hover {
+        background-color: $boopItemHoverTrans;
+        box-shadow: 0px 0px 0px 0.5rem $boopItemHoverTrans;
+      }
+      
+      img {
+        height: 2.25rem;
+        width: 2.25rem;
+        border-radius: 50%;
+        margin-right: 0.75rem;
+      }
+    }
+    
+    img {
+      height: 18.75rem;
+      width: 100%;
+      background-size: cover;
     }
   }
 }
