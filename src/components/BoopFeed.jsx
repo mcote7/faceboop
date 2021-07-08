@@ -1,28 +1,26 @@
 import React, { useState } from 'react';
-
 import * as moment from 'moment';
-
 import anonUserImg from '../assets/menuIcons/userAnon1.png';
 
 const BoopFeed = ({users, posts}) => {
-
+  
   const [postLimit, setPostLimit] = useState(6);
-
+  
   const showMorePosts = () => {
     setPostLimit(postLimit + 6);
   };
-
+  
   const randomDate = (start, end) => {
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
   };
-
+  
   const getNewRandDate = () => {
     const randDate = randomDate(new Date(2012, 0, 1), new Date());
     const target = moment(randDate).format('MMMM D YYYY @ h:mm A');
     return target;
   };
-
-
+  
+  
   return (
     <div className="boop-feed mx-auto">
       

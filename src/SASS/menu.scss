@@ -5,12 +5,12 @@
   flex-direction: column;
   height: calc(100vh - 3.55rem);
   width: 22.5rem;
-  padding: 0.75rem 0 0.25rem 1rem;
+  padding: .75rem 0 .25rem 1rem;
   background-color: $boopBgColorMain;
   position: fixed;
   z-index: 1980;
   top: 3.55rem;
-  left: 0rem;
+  left: 0;
   overflow-x: hidden;
   overflow-y: hidden;
   scrollbar-width: thin;
@@ -21,7 +21,7 @@
     left: -100%;
     &.show-main {
       left: 0rem;
-      box-shadow: 0px 6px 8px 0px $boopBoxShaddowColor;
+      box-shadow: 0 6px 8px 0 $boopBoxShaddowColor;
     }
   }
   
@@ -41,8 +41,8 @@
     width: 1rem;
   }
   &::-webkit-scrollbar-thumb {
-    border: 0.25rem solid $boopScrollBarTrack;
-    border-radius: 0.5rem;
+    border: .25rem solid $boopScrollBarTrack;
+    border-radius: .5rem;
     background-color: $boopScrollBarThumb;
   }
   &::-webkit-scrollbar-track {
@@ -51,6 +51,7 @@
   
   .close-main {
     display: none;
+    
     @media only screen and (max-width: $boopBreakpoint1) {
       position: absolute;
       right: 0;
@@ -73,7 +74,7 @@
   p {
     font-weight: 600;
     color: $boopSecondaryTextColor;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
   }
   
   .main-menu-cont {
@@ -81,23 +82,23 @@
     // mapped menu items =>
     .main-menu-item {
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: .9rem;
       font-weight: 600;
       color: $boopPrimaryTextColor;
-      border-radius: 0.025rem;
-      margin: 0.75rem 0;
+      border-radius: .025rem;
+      margin: .75rem 0;
       width: calc(100% - 1.25rem);
-      padding-left: 0.25rem;
+      padding-left: .25rem;
       
       &:hover {
         background-color: $boopItemHoverTrans;
-        box-shadow: 0px 0px 0px 0.5rem $boopItemHoverTrans;
+        box-shadow: 0 0 0 .5rem $boopItemHoverTrans;
       }
       
       img {
         height: 2.25rem;
         width: 2.25rem;
-        margin-right: 0.75rem;
+        margin-right: .75rem;
       }
     }
   }
@@ -106,17 +107,17 @@
     
     .menu-opt {
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: .9rem;
       font-weight: 600;
       color: $boopPrimaryTextColor;
-      border-radius: 0.025rem;
-      margin: 0.75rem 0;
+      border-radius: .025rem;
+      margin: .75rem 0;
       width: calc(100% - 1.25rem);
-      padding-left: 0.25rem;
+      padding-left: .25rem;
       
       &:hover {
         background-color: $boopItemHoverTrans;
-        box-shadow: 0px 0px 0px 0.5rem $boopItemHoverTrans;
+        box-shadow: 0 0 0 .5rem $boopItemHoverTrans;
         
         div {
           background-color: $boopSecondaryButtonBackgroundHOV;
@@ -128,7 +129,7 @@
         height: 2.25rem;
         width: 2.25rem;
         border-radius: 50%;
-        margin-right: 0.75rem;
+        margin-right: .75rem;
         background-color: $boopSecondaryButtonBackground;
         justify-content: center;
         align-items: center;
@@ -136,3 +137,4 @@
     }
   }
 }
+

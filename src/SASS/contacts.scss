@@ -3,11 +3,11 @@
 .boop-contacts {
   height: calc(100vh - 3.55rem);
   width: 22.5rem;
-  padding: 1.5rem 0 0.25rem 1rem;
+  padding: 1.5rem 0 .25rem 1rem;
   background-color: $boopBgColorMain;
   position: fixed;
   top: 3.55rem;
-  right: 0rem;
+  right: 0;
   overflow-x: hidden;
   overflow-y: hidden;
   scrollbar-width: thin;
@@ -16,9 +16,10 @@
   
   @media only screen and (max-width: $boopBreakpoint2) {
     right: -100%;
+    
     &.show-contacts {
-      right: 0rem;
-      box-shadow: 0px 6px 8px 0px $boopBoxShaddowColor;
+      right: 0;
+      box-shadow: 0 6px 8px 0 $boopBoxShaddowColor;
       padding-top: 3rem;
     }
   }
@@ -44,8 +45,8 @@
     width: 1rem;
   }
   &::-webkit-scrollbar-thumb {
-    border: 0.25rem solid $boopScrollBarTrack;
-    border-radius: 0.5rem;
+    border: .25rem solid $boopScrollBarTrack;
+    border-radius: .5rem;
     background-color: $boopScrollBarThumb;
   }
   &::-webkit-scrollbar-track {
@@ -62,7 +63,7 @@
       height: 2.25rem;
       width: 2.25rem;
       border-radius: 50%;
-      margin-right: 0.25rem;
+      margin-right: .25rem;
       background-color: $boopSecondaryButtonBackground;
       justify-content: center;
       align-items: center;
@@ -78,23 +79,23 @@
   p {
     font-weight: 600;
     color: $boopSecondaryTextColor;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
   }
   
   // Advertisments ::: (never) => name a class ['ad', 'advert', 'sponsored']; {:injected agent stylesheet override:}
   .boop-spons-cont {
     border-bottom: 1px solid $boopDisabledTextColor;
     padding-bottom: 1rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: .75rem;
     position: relative;
     
     // border/overlay fix
     &::before {
       content: '';
       position: absolute;
-      bottom: -0.3rem;
+      bottom: -.3rem;
       right: 0;
-      height: 0.5rem;
+      height: .5rem;
       width: 1rem;
       background-color: $boopBgColorMain;
     }
@@ -105,8 +106,8 @@
       text-decoration: none;
       
       img {
-        border-radius: 0.5rem;
-        margin-right: 0.75rem;
+        border-radius: .5rem;
+        margin-right: .75rem;
       }
       
       .boop-spons-text {
@@ -121,7 +122,7 @@
         }
         
         small {
-          font-size: 0.77rem;
+          font-size: .77rem;
           color: $boopSecondaryTextColor;
           white-space: nowrap;
           overflow: hidden;
@@ -138,7 +139,7 @@
     .contacts-options {
       display: flex;
       margin-left: auto;
-      margin-right: 0.75rem;
+      margin-right: .75rem;
       
       .new-room, .search-messages, .options {
         display: flex;
@@ -148,7 +149,7 @@
         width: 2rem;
         border-radius: 50%;
         background-color: transparent;
-        margin: 0 0.25rem;
+        margin: 0 .25rem;
         
         &:hover {
           cursor: pointer;
@@ -171,7 +172,7 @@
           &::after {
             content: '\f067';
             position: absolute;
-            font-size: 0.5rem;
+            font-size: .5rem;
             color: $boopBgColorMain;
             left: 15%;
             top: 25%;
@@ -181,8 +182,8 @@
       
       .options {
         .dot {
-          height: 0.2rem;
-          width: 0.2rem;
+          height: .2rem;
+          width: .2rem;
           border-radius: 50%;
           background-color: $boopSecondaryTextColor;
         }
@@ -193,15 +194,15 @@
   .users-cont {
     border-bottom: 1px solid $boopDisabledTextColor;
     padding-bottom: 1rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: .75rem;
     position: relative;
     
     &::before {
       content: '';
       position: absolute;
-      bottom: -0.3rem;
+      bottom: -.3rem;
       right: 0;
-      height: 0.5rem;
+      height: .5rem;
       width: 1rem;
       background-color: $boopBgColorMain;
     }
@@ -209,23 +210,23 @@
     // mapped user =>
     .user-contact {
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: .9rem;
       font-weight: 600;
       color: $boopPrimaryTextColor;
-      border-radius: 0.025rem;
-      margin: 0.75rem 0;
+      border-radius: .025rem;
+      margin: .75rem 0;
       width: calc(100% - 1.25rem);
       
       &:hover {
         background-color: $boopItemHoverTrans;
-        box-shadow: 0px 0px 0px 0.5rem $boopItemHoverTrans;
+        box-shadow: 0 0 0 .5rem $boopItemHoverTrans;
       }
       
       img {
         height: 2.25rem;
         width: 2.25rem;
         border-radius: 50%;
-        margin-right: 0.75rem;
+        margin-right: .75rem;
       }
     }
   }
@@ -235,16 +236,16 @@
     
     .group-contact {
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: .9rem;
       font-weight: 600;
       color: $boopPrimaryTextColor;
-      border-radius: 0.025rem;
-      margin: 0.75rem 0;
-      width: calc(100% - 0.5rem);
+      border-radius: .025rem;
+      margin: .75rem 0;
+      width: calc(100% - .5rem);
       
       &:hover {
         background-color: $boopItemHoverTrans;
-        box-shadow: 0px 0px 0px 0.5rem $boopItemHoverTrans;
+        box-shadow: 0 0 0 .5rem $boopItemHoverTrans;
         
         div {
           background-color: $boopSecondaryButtonBackgroundHOV;
@@ -256,7 +257,7 @@
         height: 2.25rem;
         width: 2.25rem;
         border-radius: 50%;
-        margin-right: 0.75rem;
+        margin-right: .75rem;
         background-color: $boopSecondaryButtonBackground;
         justify-content: center;
         align-items: flex-end;
@@ -264,7 +265,7 @@
         
         span {
           position: relative;
-          top: 0.15rem;
+          top: .15rem;
         }
       }
     }

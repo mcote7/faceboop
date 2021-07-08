@@ -8,7 +8,7 @@ $boopGreen: #45bd62;
 $boopYellow: #f7b928;
 $boopOrange: #f5533d;
 
-
+// LIGHT THEME //
 $boopPrimaryTextColor: #1C1E21;
 $boopSecondaryTextColor: #65676B;
 $boopInfoTextColor: #9c9fa3;
@@ -25,8 +25,15 @@ $boopScrollBarThumb: rgba(28, 30, 33, 0.22);
 $boopItemHoverTrans: rgba(0,0,0,0.05);
 $boopItemHoverTransWhiteBG: rgba(0,0,0,0.1);
 $boopBoxShaddowColor: rgba(0,0,0,0.2);
+// END LIGHT THEME //
 
+
+
+// xl
 $boopBreakpoint0: 1550px;
-$boopBreakpoint1: 1300px;
+// left side-bar collapse
+$boopBreakpoint1: 1340px;
+// right side-bar collapse
 $boopBreakpoint2: 970px;
+// mobile
 $boopBreakpoint3: 650px;

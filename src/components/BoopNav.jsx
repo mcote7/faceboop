@@ -4,7 +4,7 @@ import mainImg from '../assets/misc/mainMenu.png';
 import contactsImg from '../assets/misc/contacts.png';
 
 const BoopNav = ({users}) => {
-
+  
   const [displaySearch, setDisplaySearch] = useState(false);
   
   const showSearch = () => {
@@ -37,7 +37,7 @@ const BoopNav = ({users}) => {
   useEffect(()=> {
     console.log("search results?", searchUsersResult)
   }, [searchUsersResult]);
-
+  
   const [displayMenus, setDisplayMenus] = useState(false);
   
   const showMenus = () => {

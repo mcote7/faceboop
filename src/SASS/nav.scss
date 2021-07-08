@@ -12,7 +12,7 @@
   top: 0;
   left: 0;
   right: 0;
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
+  border-bottom: .5px solid rgba(0, 0, 0, 0.15);
   box-shadow: 1px 1px 1px 1px $boopItemHoverTrans;
   
   .logo {
@@ -27,15 +27,15 @@
       height: 2.5rem;
       width: 2.5rem;
       border-radius: 50%;
-      left: -0.25rem;
-      top: -0.1rem;
+      left: -.25rem;
+      top: -.1rem;
     }
     
     i {
       font-size: 2.2rem;
       position: relative;
-      top: 0.4rem;
-      left: 0.35rem;
+      top: .4rem;
+      left: .35rem;
     }
   }
   
@@ -50,7 +50,7 @@
     border: 2px solid $boopBgColorMain;
     display: flex;
     align-items: center;
-    padding: 0 1rem 0 0.75rem;
+    padding: 0 1rem 0 .75rem;
     
     &:focus-within {
       i {
@@ -62,9 +62,9 @@
     i {
       position: absolute;
       color: $boopSecondaryTextColor;
-      margin-right: 0.25rem;
+      margin-right: .25rem;
       width: 1rem;
-      transition: 0.15s ease-in-out;
+      transition: .15s ease-in-out;
     }
     
     input {
@@ -72,13 +72,13 @@
       border: none;
       width: 11.25rem;
       margin-left: 1.25rem;
-      transition: 0.15s ease-in-out;
+      transition: .15s ease-in-out;
       
       &:focus {
         border: none;
         outline: none;
         width: 12.5rem;
-        margin-left: 0rem;
+        margin-left: 0;
       }
     }
   }
@@ -87,8 +87,8 @@
     display: flex;
     cursor: pointer;
     background-color: transparent;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1.75rem;
+    border-radius: .5rem;
+    padding: .5rem 1.75rem;
     opacity: 0;
     margin-left: auto;
     
@@ -122,13 +122,13 @@
   color: $boopInfoTextColor;
   width: 20rem;
   min-height: 6.25rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.25rem;
+  padding-top: .75rem;
+  padding-bottom: .25rem;
+  padding-left: .25rem;
   padding-right: 1rem;
-  font-size: 0.9rem;
-  border-radius:0 0 0.5rem 0.5rem;
-  box-shadow: 0px 12px 12px 0px $boopBoxShaddowColor;
+  font-size: .9rem;
+  border-radius:0 0 .5rem .5rem;
+  box-shadow: 0 12px 12px 0 $boopBoxShaddowColor;
   
   .search-back {
     display: flex;
@@ -138,7 +138,7 @@
     width: 2.25rem;
     border-radius: 50%;
     background-color: transparent;
-    margin-left: 0.25rem;
+    margin-left: .25rem;
     
     &:hover {
       cursor: pointer;
@@ -155,30 +155,31 @@
   
   .main-menu-link, .contacts-link {
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: .9rem;
     font-weight: 600;
     color: $boopPrimaryTextColor;
-    border-radius: 0.025rem;
-    margin: 0.75rem 0;
-    margin-left: 0.75rem;
+    border-radius: .025rem;
+    margin: .75rem 0;
+    margin-left: .75rem;
     display: flex;
     align-items: center;
     
     &:hover {
       background-color: $boopItemHoverTransWhiteBG;
-      box-shadow: 0px 0px 0px 0.5rem $boopItemHoverTransWhiteBG;
+      box-shadow: 0 0 0 .5rem $boopItemHoverTransWhiteBG;
     }
     
     img {
       height: 2.25rem;
       width: 2.25rem;
-      margin-right: 0.75rem;
+      margin-right: .75rem;
       filter: grayscale(1);
     }
   }
   
   .contacts-link {
     display: none;
+    
     @media only screen and (max-width: $boopBreakpoint2) {
       display: flex;
     }
@@ -199,20 +200,20 @@
   color: $boopInfoTextColor;
   width: 20rem;
   min-height: 6.25rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.25rem;
+  padding-top: .5rem;
+  padding-bottom: .25rem;
+  padding-left: .25rem;
   padding-right: 1rem;
-  font-size: 0.9rem;
-  border-radius:0 0 0.5rem 0.5rem;
-  box-shadow: 0px 12px 12px 0px $boopBoxShaddowColor;
+  font-size: .9rem;
+  border-radius:0 0 .5rem .5rem;
+  box-shadow: 0 12px 12px 0 $boopBoxShaddowColor;
   
   .search-mod-group {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-top: 1px;
-    margin-bottom: 0.25rem;
+    margin-bottom: .25rem;
     
     .search-back {
       display: flex;
@@ -239,7 +240,7 @@
     .search-faceboop {
       position: relative;
       margin-top: -1px;
-      margin-left: 0.25rem;
+      margin-left: .25rem;
       height: 2.5rem;
       width: 16rem;
       border-radius: 1.25rem;
@@ -247,8 +248,8 @@
       border: 2px solid $boopBgColorMain;
       display: flex;
       align-items: center;
-      padding: 0 1rem 0 0.75rem;
-      animation: show-search 0.15s ease-in-out;
+      padding: 0 1rem 0 .75rem;
+      animation: show-search .15s ease-in-out;
       @keyframes show-search {
         from {width: 15rem;}
         to {width: 16rem;}
@@ -266,7 +267,7 @@
         color: $boopSecondaryTextColor;
         margin-right: 0.25rem;
         width: 1rem;
-        transition: 0.15s ease-in-out;
+        transition: .15s ease-in-out;
       }
       
       input {
@@ -274,12 +275,12 @@
         border: none;
         width: 11.25rem;
         margin-left: 1.25rem;
-        transition: 0.15s ease-in-out;
+        transition: .15s ease-in-out;
         
         &:focus {
           border: none;
           outline: none;
-          margin-left: 0rem;
+          margin-left: 0;
         }
       }
     }
@@ -287,25 +288,25 @@
   
   .user-contact {
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: .9rem;
     font-weight: 600;
     color: $boopPrimaryTextColor;
-    border-radius: 0.025rem;
-    margin: 0.75rem 0;
-    margin-left: 0.75rem;
+    border-radius: .025rem;
+    margin: .75rem 0;
+    margin-left: .75rem;
     display: flex;
     align-items: center;
     
     &:hover {
       background-color: $boopItemHoverTransWhiteBG;
-      box-shadow: 0px 0px 0px 0.5rem $boopItemHoverTransWhiteBG;
+      box-shadow: 0 0 0 .5rem $boopItemHoverTransWhiteBG;
     }
     
     img {
       height: 2.25rem;
       width: 2.25rem;
       border-radius: 50%;
-      margin-right: 0.75rem;
+      margin-right: .75rem;
     }
   }
 }

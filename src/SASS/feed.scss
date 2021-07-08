@@ -3,29 +3,25 @@
 .boop-feed {
   display: flex;
   flex-direction: column;
-  padding: 6rem 0rem;
-  // width: calc(100% - 45rem);
+  padding: 6rem 0;
   justify-content: center;
   align-items: center;
-  
-  @media only screen and (max-width: $boopBreakpoint1) {
-    width: 100%;
-  }
   
   .post-form {
     width: 100%;
     max-width: 42.5rem;
     background-color: white;
     color: $boopPrimaryTextColor;
-    border-radius: 0.5rem;
-    padding: 0.75rem 1rem;
+    border-radius: .5rem;
+    padding: .75rem 1rem;
     margin: 1rem 0;
     margin-top: 0;
-    box-shadow: 0px 1px 0px 1px $boopItemHoverTransWhiteBG;
+    box-shadow: 0 1px 0 1px $boopItemHoverTransWhiteBG;
     
     @media only screen and (max-width: $boopBreakpoint0) {
       max-width: 36.875rem;
     }
+    
     @media only screen and (max-width: $boopBreakpoint3) {
       width: 100%;
     }
@@ -38,7 +34,7 @@
         height: 2.5rem;
         width: 2.5rem;
         border-radius: 50%;
-        margin-right: 0.75rem;
+        margin-right: .75rem;
         cursor: pointer;
         
         &:hover {
@@ -55,7 +51,7 @@
         border: 2px solid transparent;
         display: flex;
         align-items: center;
-        padding: 0 1rem 0 0.75rem;
+        padding: 0 1rem 0 .75rem;
         color: $boopSecondaryTextColor;
         
         &:hover {
@@ -65,8 +61,8 @@
     }
     
     hr {
-      margin-top: 0.75rem;
-      margin-bottom: 0.5rem;
+      margin-top: .75rem;
+      margin-bottom: .5rem;
       background-color: $boopInfoTextColor;
     }
     
@@ -77,12 +73,12 @@
       button {
         border: none;
         background-color: transparent;
-        border-radius: 0.5rem;
-        padding: 0.5rem 1rem;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
         width: 100%;
         font-weight: 600;
         color: $boopSecondaryTextColor;
-        font-size: 0.9rem;
+        font-size: .9rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -90,7 +86,7 @@
         @media only screen and (max-width: $boopBreakpoint3) {
           flex-direction: column;
           white-space: nowrap;
-          padding: 0.5rem 0rem;
+          padding: .5rem 0;
         }
         
         &:hover {
@@ -98,8 +94,12 @@
         }
         
         i {
-          margin-right: 0.5rem;
+          margin-right: .5rem;
           font-size: 1.5rem;
+          
+          @media only screen and (max-width: $boopBreakpoint3) {
+            margin-right: 0;
+          }
         }
         
         .fa-video-camera {
@@ -107,16 +107,20 @@
           display: flex;
           align-items: center;
           color: $boopRed;
-          margin-right: 0.5rem;
+          margin-right: .5rem;
           transform: scaleY(1.1);
+          
+          @media only screen and (max-width: $boopBreakpoint3) {
+            margin-right: 0;
+          }
           
           &::after {
             content: '\f06e';
             color: white;
             position: absolute;
-            font-size: 0.7rem;
+            font-size: .7rem;
             font-weight: bold;
-            margin-left: 0.2rem;
+            margin-left: .2rem;
           }
         }
         
@@ -137,10 +141,10 @@
     max-width: 42.5rem;
     background-color: white;
     color: $boopPrimaryTextColor;
-    border-radius: 0.5rem;
-    padding: 0.75rem 0rem;
+    border-radius: .5rem;
+    padding: .75rem 0;
     margin: 1rem 0;
-    box-shadow: 0px 1px 0px 1px $boopItemHoverTransWhiteBG;
+    box-shadow: 0 1px 0 1px $boopItemHoverTransWhiteBG;
     
     @media only screen and (max-width: $boopBreakpoint0) {
       max-width: 36.875rem;
@@ -152,17 +156,17 @@
     .post-user {
       display: flex;
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: .9rem;
       font-weight: 600;
       color: $boopPrimaryTextColor;
-      margin-bottom: 0.5rem;
+      margin-bottom: .5rem;
       padding: 0 1rem;
       
       img {
         height: 2.5rem;
         width: 2.5rem;
         border-radius: 50%;
-        margin-right: 0.5rem;
+        margin-right: .5rem;
       }
       .user-title {
         display: flex;
@@ -171,7 +175,7 @@
         small {
           font-weight: 400;
           color: $boopSecondaryTextColor;
-          line-height: 0.9;
+          line-height: .9;
         }
       }
     }
@@ -184,10 +188,11 @@
     
     .post-img-title {
       margin: 0 1rem;
-      padding: 0.5rem 1.25rem 0.25rem 1.25rem;
+      padding: .5rem 1.25rem .25rem 1.25rem;
       border: 1px solid $boopDisabledTextColor;
       border-top: none;
-      border-radius: 0 0 0.5rem 0.5rem;
+      border-radius: 0 0 .5rem .5rem;
     }
   }
 }
+
