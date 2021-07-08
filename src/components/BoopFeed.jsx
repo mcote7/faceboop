@@ -46,22 +46,31 @@ const BoopFeed = ({users, posts}) => {
         </div>
       </div>
       
-      {posts && posts.map((post, idx)=> {
+      {users && posts && posts.map((post, idx)=> {
         return(
           idx < postLimit ?
           <div key={idx} className="boop-post">
             
             <div className="post-user">
-              <img src={`https://randomuser.me/api/portraits/thumb/women/${users[post.userId].id}.jpg`} alt="contact"/>
+              <img src={`https://randomuser.me/api/portraits/thumb/women/${users[post.userId - 1].id}.jpg`} alt="contact"/>
               <div className="user-title">
-                {users[post.userId].name}
+                {users[post.userId - 1].name}
                 <small>{getNewRandDate()} &bull; <i className="fa fa-globe" aria-hidden="true"></i></small>
               </div>
             </div>
             
+            <div className="post-desc">
+              {post.body}
+            </div>
+            
             <img src={`https://source.unsplash.com/collection/${idx}/200x200/?space`} alt="post img" />
+            
             <div className="post-img-title">
               {post.title}
+            </div>
+            
+            <div className="post-options">
+              {/*  */}
             </div>
             
           </div> : ''

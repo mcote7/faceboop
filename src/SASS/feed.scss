@@ -180,6 +180,13 @@
       }
     }
     
+    .post-desc {
+      padding: 0 1rem;
+      margin-bottom: .5rem;
+      font-size: .9rem;
+      
+    }
+    
     img {
       height: 18.75rem;
       width: 100%;
@@ -192,6 +199,8 @@
       border: 1px solid $boopDisabledTextColor;
       border-top: none;
       border-radius: 0 0 .5rem .5rem;
+      font-size: .9rem;
+      font-weight: 600;
     }
   }
 }

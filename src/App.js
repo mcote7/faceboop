@@ -19,6 +19,7 @@ const App = () => {
       setUsers(res);
     });
     getAllPost().then(res => {
+      shuffleArray(res);
       setPosts(res);
     });
   },[]);
@@ -28,8 +29,16 @@ const App = () => {
   },[users]);
   
   useEffect(()=> {
-    console.log("🚩 posts",posts)
+    console.log("🎈 posts", posts)
   },[posts]);
+  
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (array.length));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
   
   return (
     <div className="faceboop container-fluid">
