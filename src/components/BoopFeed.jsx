@@ -92,6 +92,12 @@ const BoopFeed = ({users, posts}) => {
               </button>
             </div>
             
+            {/* comments */}
+            <div className="comment-input">
+              <img src={anonUserImg} alt="anon" />
+              <input type="text" placeholder="Write a comment..."/>
+            </div>
+            
           </div> : ''
         );
       })}
