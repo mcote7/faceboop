@@ -96,7 +96,7 @@
       opacity: 1;
     }
     @media only screen and (max-width: $boopBreakpoint3) {
-      padding: 0;
+      padding: .25rem .75rem;
     }
     
     &:hover {
@@ -165,8 +165,8 @@
     align-items: center;
     
     &:hover {
-      background-color: $boopItemHoverTransWhiteBG;
-      box-shadow: 0 0 0 .5rem $boopItemHoverTransWhiteBG;
+      background-color: $boopItemHoverTransHeavy;
+      box-shadow: 0 0 0 .5rem $boopItemHoverTransHeavy;
     }
     
     img {
@@ -298,8 +298,8 @@
     align-items: center;
     
     &:hover {
-      background-color: $boopItemHoverTransWhiteBG;
-      box-shadow: 0 0 0 .5rem $boopItemHoverTransWhiteBG;
+      background-color: $boopItemHoverTransHeavy;
+      box-shadow: 0 0 0 .5rem $boopItemHoverTransHeavy;
     }
     
     img {

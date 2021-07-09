@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as moment from 'moment';
 import anonUserImg from '../assets/menuIcons/userAnon1.png';
 
 const BoopFeed = ({users, posts}) => {
+
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(()=> {
+    if(users.length > 0 && posts.length > 0) {
+      setTimeout(() => {setLoading(false)});
+    }
+  },[users,posts]);
   
   const [postLimit, setPostLimit] = useState(6);
   
@@ -46,7 +54,7 @@ const BoopFeed = ({users, posts}) => {
         </div>
       </div>
       
-      {users && posts && posts.map((post, idx)=> {
+      {!loading && posts.map((post, idx)=> {
         return(
           idx < postLimit ?
           <div key={idx} className="boop-post">
@@ -70,14 +78,28 @@ const BoopFeed = ({users, posts}) => {
             </div>
             
             <div className="post-options">
-              {/*  */}
+              <button>
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                Like
+              </button>
+              <button className="mx-1">
+                <i class="fa fa-comment-o" aria-hidden="true"></i>
+                Comment
+              </button>
+              <button>
+                <i class="fa fa-share" aria-hidden="true"></i>
+                Share
+              </button>
             </div>
             
           </div> : ''
         );
       })}
       
-      <button onClick={()=>showMorePosts()} className="show-more-posts">Show More &darr;</button>
+      {loading 
+        ? <div className="loading-feed mt-5"><i class="fa fa-spinner fa-5x" aria-hidden="true"></i></div>
+        
+        : <button onClick={()=>showMorePosts()} className="show-more-posts">Show More &darr;</button> }
     </div>
   );
 };
