@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { getAllUsers } from './server/api';
 import { getAllPost } from './server/api';
+import { getAllComments } from './server/api';
 
 import BoopNav from './components/BoopNav';
 import BoopContacts from './components/BoopContacts';
@@ -13,6 +14,7 @@ const App = () => {
   
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
+  const [comments, setComments] = useState([]);
   
   useEffect(()=> {
     getAllUsers().then(res => {
@@ -21,6 +23,9 @@ const App = () => {
     getAllPost().then(res => {
       shuffleArray(res);
       setPosts(res);
+    });
+    getAllComments().then(res => {
+      setComments(res);
     });
   },[]);
   
@@ -31,6 +36,10 @@ const App = () => {
   useEffect(()=> {
     console.log("🎈 posts", posts)
   },[posts]);
+  
+  useEffect(()=> {
+    console.log("💡 comments", comments)
+  },[comments]);
   
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -48,7 +57,7 @@ const App = () => {
         
         <BoopMainMenu/>
         
-        <BoopFeed users={users} posts={posts}/>
+        <BoopFeed users={users} posts={posts} comments={comments}/>
         
         <BoopContacts users={users}/>
         

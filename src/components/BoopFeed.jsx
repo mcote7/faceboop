@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import * as moment from 'moment';
 import anonUserImg from '../assets/menuIcons/userAnon1.png';
 
-const BoopFeed = ({users, posts}) => {
+const BoopFeed = ({users, posts, comments}) => {
 
   const [loading, setLoading] = useState(true);
   
   useEffect(()=> {
-    if(users.length > 0 && posts.length > 0) {
+    if(users.length > 0 && posts.length > 0 && comments.length > 0) {
       setTimeout(() => {setLoading(false)});
     }
-  },[users,posts]);
+  },[users,posts,comments]);
   
   const [postLimit, setPostLimit] = useState(6);
   
@@ -77,17 +77,36 @@ const BoopFeed = ({users, posts}) => {
               {post.title}
             </div>
             
+            {/* display # of likes & comments */}
+            <div className="post-stats">
+              {comments && comments.filter(comm => comm.postId === post.id).length} Comments
+            </div>
+            
+            {/* for listing comments */}
+            
+            {/* {comments && comments
+                .filter(comm => comm.postId === post.id)
+                .map((comment, idx)=> {
+                  return(
+                    <div key={idx}>
+                      <div>{comment.id}</div>
+                    </div>
+                  );
+                })} */}
+            
+            {/*  */}
+            
             <div className="post-options">
               <button>
-                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
                 Like
               </button>
               <button className="mx-1">
-                <i class="fa fa-comment-o" aria-hidden="true"></i>
+                <i className="fa fa-comment-o" aria-hidden="true"></i>
                 Comment
               </button>
               <button>
-                <i class="fa fa-share" aria-hidden="true"></i>
+                <i className="fa fa-share" aria-hidden="true"></i>
                 Share
               </button>
             </div>
@@ -103,7 +122,7 @@ const BoopFeed = ({users, posts}) => {
       })}
       
       {loading 
-        ? <div className="loading-feed mt-5"><i class="fa fa-spinner fa-5x" aria-hidden="true"></i></div>
+        ? <div className="loading-feed mt-5"><i className="fa fa-spinner fa-5x" aria-hidden="true"></i></div>
         
         : <button onClick={()=>showMorePosts()} className="show-more-posts">Show More &darr;</button> }
     </div>
