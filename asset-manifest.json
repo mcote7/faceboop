@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/faceboop/static/css/main.e64afeeb.chunk.css",
-    "main.js": "/faceboop/static/js/main.2a7ab8f4.chunk.js",
-    "main.js.map": "/faceboop/static/js/main.2a7ab8f4.chunk.js.map",
+    "main.js": "/faceboop/static/js/main.2ce54c6b.chunk.js",
+    "main.js.map": "/faceboop/static/js/main.2ce54c6b.chunk.js.map",
     "runtime-main.js": "/faceboop/static/js/runtime-main.0edcf9f4.js",
     "runtime-main.js.map": "/faceboop/static/js/runtime-main.0edcf9f4.js.map",
     "static/css/2.d1628ef2.chunk.css": "/faceboop/static/css/2.d1628ef2.chunk.css",
@@ -45,6 +45,6 @@
     "static/css/2.d1628ef2.chunk.css",
     "static/js/2.391dbdc3.chunk.js",
     "static/css/main.e64afeeb.chunk.css",
-    "static/js/main.2a7ab8f4.chunk.js"
+    "static/js/main.2ce54c6b.chunk.js"
   ]
 }
