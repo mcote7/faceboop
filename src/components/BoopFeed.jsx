@@ -18,6 +18,11 @@ const BoopFeed = ({users, posts, comments}) => {
     setPostLimit(postLimit + 6);
   };
   
+  const showComments = (idx) => {
+    let postComments = document.getElementById(`commentBox${idx}`);
+    postComments.classList.toggle('show-comments');
+  };
+  
   const randomDate = (start, end) => {
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
   };
@@ -26,6 +31,10 @@ const BoopFeed = ({users, posts, comments}) => {
     const randDate = randomDate(new Date(2012, 0, 1), new Date());
     const target = moment(randDate).format('MMMM D YYYY @ h:mm A');
     return target;
+  };
+  
+  const getRandomInt = () => {
+    return Math.floor(Math.random() * 101);
   };
   
   
@@ -79,22 +88,21 @@ const BoopFeed = ({users, posts, comments}) => {
             
             {/* display # of likes & comments */}
             <div className="post-stats">
-              {comments && comments.filter(comm => comm.postId === post.id).length} Comments
+              <div className="post-responses">
+                <div className="show-loves">
+                  <i className="fa fa-heart" aria-hidden="true"></i>
+                </div>
+                <div className="show-likes ms-1">
+                  <i className="fa fa-thumbs-up" aria-hidden="true"></i>
+                </div>
+                <div className="show-emoji ms-1">
+                  {/*  */}
+                </div>
+              </div>
+              <div onClick={()=>showComments(idx)} className="show-comments">
+                {comments && comments.filter(comm => comm.postId === post.id).length} Comments
+              </div>
             </div>
-            
-            {/* for listing comments */}
-            
-            {/* {comments && comments
-                .filter(comm => comm.postId === post.id)
-                .map((comment, idx)=> {
-                  return(
-                    <div key={idx}>
-                      <div>{comment.id}</div>
-                    </div>
-                  );
-                })} */}
-            
-            {/*  */}
             
             <div className="post-options">
               <button>
@@ -115,6 +123,39 @@ const BoopFeed = ({users, posts, comments}) => {
             <div className="comment-input">
               <img src={anonUserImg} alt="anon" />
               <input type="text" placeholder="Write a comment..."/>
+            </div>
+            
+            <div id={`commentBox${idx}`} className="comment-box">
+            {comments && comments
+                .filter(comm => comm.postId === post.id)
+                .map((comment, idx)=> {
+                  return(
+                    <div key={idx} className="my-1">
+                      
+                      <div className="comment-user">
+                        {idx % 2 === 0 ? 
+                          <img src={`https://randomuser.me/api/portraits/thumb/women/${getRandomInt()}.jpg`} alt="comment-user"/>
+                          : 
+                          <img src={`https://randomuser.me/api/portraits/thumb/men/${getRandomInt()}.jpg`} alt="comment-user"/>
+                        }
+                      </div>
+                      
+                      <div className="comment-body">
+                        <small>{comment.email}</small>
+                        {idx % 2 === 0 ?
+                          <div className="comment-comment">
+                            {comment.name}
+                          </div>
+                          :
+                          <div className="comment-comment">
+                            {comment.body}
+                          </div>
+                        }
+                      </div>
+                      
+                    </div>
+                  );
+                })}
             </div>
             
           </div> : ''
