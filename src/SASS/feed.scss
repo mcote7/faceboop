@@ -282,6 +282,10 @@
       align-items: center;
       position: relative;
       
+      &.hide-comment-input {
+        display: none;
+      }
+      
       &::before {
         content: 'Press Enter to post.';
         position: absolute;

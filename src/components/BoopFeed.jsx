@@ -18,10 +18,20 @@ const BoopFeed = ({users, posts, comments}) => {
     setPostLimit(postLimit + 6);
   };
   
-  const showComments = (idx) => {
+  const toggleShowComments = (idx) => {
     let postComments = document.getElementById(`commentBox${idx}`);
     postComments.classList.toggle('show-comments');
   };
+  
+  const showComments = (idx) => {
+    let postComments = document.getElementById(`commentBox${idx}`);
+    postComments.classList.add('show-comments');
+  };
+  
+  const toggleShowCommentInput = (idx) => {
+    let postInput = document.getElementById(`commentInput${idx}`);
+    postInput.classList.toggle('hide-comment-input');
+  }
   
   const randomDate = (start, end) => {
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
@@ -99,7 +109,7 @@ const BoopFeed = ({users, posts, comments}) => {
                   {/*  */}
                 </div>
               </div>
-              <div onClick={()=>showComments(idx)} className="show-comments">
+              <div onClick={()=>toggleShowComments(idx)} className="show-comments">
                 {comments && comments.filter(comm => comm.postId === post.id).length} Comments
               </div>
             </div>
@@ -109,7 +119,7 @@ const BoopFeed = ({users, posts, comments}) => {
                 <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
                 Like
               </button>
-              <button className="mx-1">
+              <button onClick={()=>toggleShowCommentInput(idx)} className="mx-1">
                 <i className="fa fa-comment-o" aria-hidden="true"></i>
                 Comment
               </button>
@@ -120,9 +130,9 @@ const BoopFeed = ({users, posts, comments}) => {
             </div>
             
             {/* comments */}
-            <div className="comment-input">
+            <div id={`commentInput${idx}`} className="comment-input">
               <img src={anonUserImg} alt="anon" />
-              <input type="text" placeholder="Write a comment..."/>
+              <input type="text" onFocus={()=>showComments(idx)} placeholder="Write a comment..."/>
             </div>
             
             <div id={`commentBox${idx}`} className="comment-box">
@@ -134,9 +144,9 @@ const BoopFeed = ({users, posts, comments}) => {
                       
                       <div className="comment-user">
                         {idx % 2 === 0 ? 
-                          <img src={`https://randomuser.me/api/portraits/thumb/women/${getRandomInt()}.jpg`} alt="comment-user"/>
+                          <img src={`https://randomuser.me/api/portraits/thumb/women/${getRandomInt()}.jpg`} alt="user"/>
                           : 
-                          <img src={`https://randomuser.me/api/portraits/thumb/men/${getRandomInt()}.jpg`} alt="comment-user"/>
+                          <img src={`https://randomuser.me/api/portraits/thumb/men/${getRandomInt()}.jpg`} alt="user"/>
                         }
                       </div>
                       
