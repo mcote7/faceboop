@@ -65,10 +65,10 @@ const BoopFeed = ({users, posts, comments}) => {
     postInput.classList.toggle('hide-comment-input');
   }
   
+  // randoms 
   const randomDate = (start, end) => {
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
   };
-  
   const getNewRandDate = () => {
     const randDate = randomDate(new Date(2012, 0, 1), new Date());
     const target = moment(randDate).format('MMMM D YYYY @ h:mm A');
@@ -78,7 +78,7 @@ const BoopFeed = ({users, posts, comments}) => {
   const getRandomInt = () => {
     return Math.floor(Math.random() * 99);
   };
-  
+  // 
   
   return (
     <div className="boop-feed mx-auto">
