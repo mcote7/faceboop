@@ -1,23 +1,56 @@
 import React, { useEffect, useState } from 'react';
-import * as moment from 'moment';
 import anonUserImg from '../assets/menuIcons/userAnon1.png';
+import * as moment from 'moment';
+import * as _ from 'lodash';
+import useRS from "radioactive-state";
 
 const BoopFeed = ({users, posts, comments}) => {
 
-  const [loading, setLoading] = useState(true);
-  
+  // const [loading, setLoading] = useState(true);
+  // const [postLen, setPostLen] = useState(100);
+  // const [postLimit, setPostLimit] = useState(6);
+
+  const [listLoaded, setListLoaded] = useState(false);
+
+  const state = useRS({
+    loading: true,
+    postLen: 0,
+    postLimit: 6
+  });
+
   useEffect(()=> {
     if(users.length > 0 && posts.length > 0 && comments.length > 0) {
-      setTimeout(() => {setLoading(false)});
+      state.postLen = posts.length;
+      console.log("post len 1 :::", state.postLen)
+      setListLoaded(true);
+      setTimeout(() => {state.loading = false});
     }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   },[users,posts,comments]);
-  
-  const [postLimit, setPostLimit] = useState(6);
-  
+
+  useEffect(()=> {
+    console.log("post len 2 :::", state.postLen)
+    window.addEventListener('scroll', _.throttle(showMorePosts, 100));
+    return window.removeEventListener('scroll', _.throttle(showMorePosts, 100));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[listLoaded]);
+
   const showMorePosts = () => {
-    setPostLimit(postLimit + 6);
+    console.log("limit , p len", state.postLimit, state.postLen);
+    if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      console.log("AT BOTTOM!", state.postLimit, state.postLen);
+      if (state.postLimit + 6 < state.postLen) {
+        state.loading = true;
+        state.postLimit = state.postLimit + 6;
+        console.log("scroll top :::::", +window.scrollY.toFixed())
+        setTimeout(() => {state.loading = false});
+      }
+    } else {
+      console.log("not at bottom yet")
+    }
   };
   
+  // ok 
   const toggleShowComments = (idx) => {
     let postComments = document.getElementById(`commentBox${idx}`);
     postComments.classList.toggle('show-comments');
@@ -44,7 +77,7 @@ const BoopFeed = ({users, posts, comments}) => {
   };
   
   const getRandomInt = () => {
-    return Math.floor(Math.random() * 101);
+    return Math.floor(Math.random() * 99);
   };
   
   
@@ -73,15 +106,15 @@ const BoopFeed = ({users, posts, comments}) => {
         </div>
       </div>
       
-      {!loading && posts.map((post, idx)=> {
+      {!state.loading && posts.map((post, idx)=> {
         return(
-          idx < postLimit ?
+          idx < state.postLimit ?
           <div key={idx} className="boop-post">
             
             <div className="post-user">
               <img src={`https://randomuser.me/api/portraits/thumb/women/${users[post.userId - 1].id}.jpg`} alt="contact"/>
               <div className="user-title">
-                {users[post.userId - 1].name}
+                {users[post.userId - 1].name} {idx}
                 <small>{getNewRandDate()} &bull; <i className="fa fa-globe" aria-hidden="true"></i></small>
               </div>
             </div>
@@ -172,11 +205,7 @@ const BoopFeed = ({users, posts, comments}) => {
           </div> : ''
         );
       })}
-      
-      {loading 
-        ? <div className="loading-feed mt-5"><i className="fa fa-spinner fa-5x" aria-hidden="true"></i></div>
-        
-        : <button onClick={()=>showMorePosts()} className="show-more-posts">Show More &darr;</button> }
+      {state.loading ? <div className="loading-feed mt-5"><i className="fa fa-spinner fa-5x" aria-hidden="true"></i></div> : ''}
     </div>
   );
 };
