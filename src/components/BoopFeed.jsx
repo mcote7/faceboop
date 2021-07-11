@@ -150,6 +150,7 @@ const BoopFeed = ({users, posts, comments}) => {
                         }
                       </div>
                       
+                      {/* fix here comment name | body */}
                       <div className="comment-body">
                         <small>{comment.email}</small>
                         {idx % 2 === 0 ?
