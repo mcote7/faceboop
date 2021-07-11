@@ -68,7 +68,10 @@ const BoopContacts = ({users}) => {
       
       <div className="group-cont">
         <div className="group-contact">
-          <div><span>+</span></div>
+          <div>
+            <span>+</span>
+          </div>
+          
           Create New Group
         </div>
       </div>

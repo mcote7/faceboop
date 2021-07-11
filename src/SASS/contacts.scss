@@ -235,13 +235,15 @@
   .group-cont {
     
     .group-contact {
+      display: flex;
+      align-items: center;
       cursor: pointer;
       font-size: .9rem;
       font-weight: 600;
       color: $boopPrimaryTextColor;
       border-radius: .025rem;
       margin: .75rem 0;
-      width: calc(100% - .5rem);
+      width: calc(100% - 1.25rem);
       
       &:hover {
         background-color: $boopItemHoverTrans;
@@ -253,14 +255,14 @@
       }
       
       div {
-        display: inline-flex;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
         height: 2.25rem;
         width: 2.25rem;
         border-radius: 50%;
         margin-right: .75rem;
         background-color: $boopSecondaryButtonBackground;
-        justify-content: center;
-        align-items: flex-end;
         font-size: 2rem;
         
         span {
