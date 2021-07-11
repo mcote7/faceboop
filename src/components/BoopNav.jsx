@@ -60,12 +60,16 @@ const BoopNav = ({users}) => {
     hideMenus();
   };
   
+  const scrollToTop = () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  };
+  
   
   return (
     <React.Fragment>
       <div className="boop-nav">
         
-        <div className="logo">
+        <div onClick={()=>scrollToTop()} className="logo">
           <i className="fa fa-facebook" aria-hidden="true"></i>
         </div>
         

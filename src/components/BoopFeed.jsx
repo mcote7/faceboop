@@ -6,22 +6,19 @@ import useRS from "radioactive-state";
 
 const BoopFeed = ({users, posts, comments}) => {
 
-  // const [loading, setLoading] = useState(true);
-  // const [postLen, setPostLen] = useState(100);
-  // const [postLimit, setPostLimit] = useState(6);
-
   const [listLoaded, setListLoaded] = useState(false);
 
   const state = useRS({
     loading: true,
     postLen: 0,
-    postLimit: 6
+    postLimit: 4,
+    loadingMore: false
   });
 
   useEffect(()=> {
     if(users.length > 0 && posts.length > 0 && comments.length > 0) {
       state.postLen = posts.length;
-      console.log("post len 1 :::", state.postLen)
+      // console.log("post len 1 :::", state.postLen)
       setListLoaded(true);
       setTimeout(() => {state.loading = false});
     }
@@ -29,24 +26,26 @@ const BoopFeed = ({users, posts, comments}) => {
   },[users,posts,comments]);
 
   useEffect(()=> {
-    console.log("post len 2 :::", state.postLen)
+    // console.log("post len 2 :::", state.postLen)
     window.addEventListener('scroll', _.throttle(showMorePosts, 100));
     return window.removeEventListener('scroll', _.throttle(showMorePosts, 100));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[listLoaded]);
 
   const showMorePosts = () => {
-    console.log("limit , p len", state.postLimit, state.postLen);
+    // console.log("limit , p len", state.postLimit, state.postLen);
     if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-      console.log("AT BOTTOM!", state.postLimit, state.postLen);
-      if (state.postLimit + 6 < state.postLen) {
-        state.loading = true;
-        state.postLimit = state.postLimit + 6;
-        console.log("scroll top :::::", +window.scrollY.toFixed())
-        setTimeout(() => {state.loading = false});
+      // console.log("AT BOTTOM!", state.postLimit, state.postLen);
+      if (state.postLimit + 4 < state.postLen) {
+        state.loadingMore = true;
+        // 🚧🚧🚧 simulated api delay 
+        setTimeout(() => {
+          state.loadingMore = false;
+        }, 400);
+        setTimeout(() => {
+          state.postLimit = state.postLimit + 6;
+        }, 401);
       }
-    } else {
-      console.log("not at bottom yet")
     }
   };
   
@@ -205,6 +204,7 @@ const BoopFeed = ({users, posts, comments}) => {
           </div> : ''
         );
       })}
+      {state.loadingMore ? <div className="loading-feed mt-5"><i className="fa fa-spinner fa-5x" aria-hidden="true"></i></div> : ''}
       {state.loading ? <div className="loading-feed mt-5"><i className="fa fa-spinner fa-5x" aria-hidden="true"></i></div> : ''}
     </div>
   );
