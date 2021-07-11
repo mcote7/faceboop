@@ -36,14 +36,14 @@ const BoopFeed = ({users, posts, comments}) => {
     // console.log("limit , p len", state.postLimit, state.postLen);
     if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
       // console.log("AT BOTTOM!", state.postLimit, state.postLen);
-      if (state.postLimit + 4 < state.postLen) {
+      if (state.postLimit + 2 < state.postLen) {
         state.loadingMore = true;
-        // 🚧🚧🚧 simulated api delay 
+        // 🚧🚧🚧 simulated api delay need to re-factor whole func when database is added 
         setTimeout(() => {
           state.loadingMore = false;
         }, 400);
         setTimeout(() => {
-          state.postLimit = state.postLimit + 6;
+          state.postLimit = state.postLimit + 2;
         }, 401);
       }
     }
@@ -113,7 +113,7 @@ const BoopFeed = ({users, posts, comments}) => {
             <div className="post-user">
               <img src={`https://randomuser.me/api/portraits/thumb/women/${users[post.userId - 1].id}.jpg`} alt="contact"/>
               <div className="user-title">
-                {users[post.userId - 1].name} {idx}
+                {users[post.userId - 1].name}
                 <small>{getNewRandDate()} &bull; <i className="fa fa-globe" aria-hidden="true"></i></small>
               </div>
             </div>
