@@ -265,6 +265,10 @@
         background-color: $boopSecondaryButtonBackground;
         font-size: 2rem;
         
+        @media only screen and (max-width: $boopBreakpoint3) {
+          align-items: center;
+        }
+        
         span {
           position: relative;
           top: .15rem;
