@@ -33,9 +33,16 @@ const BoopFeed = ({users, posts, comments}) => {
   },[listLoaded]);
 
   const showMorePosts = () => {
-    // console.log("limit , p len", state.postLimit, state.postLen);
-    if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-      // console.log("AT BOTTOM!", state.postLimit, state.postLen);
+    // let scrollHeight = Math.max(
+    //   document.body.scrollHeight, document.documentElement.scrollHeight,
+    //   document.body.offsetHeight, document.documentElement.offsetHeight,
+    //   document.body.clientHeight, document.documentElement.clientHeight
+    // );
+    console.log("limit , p len", state.postLimit, state.postLen);
+    console.log("doc.doc.cliHei", document.documentElement.clientHeight + window.pageYOffset, "doc.bod.offHei", document.body.offsetHeight);
+    if((document.documentElement.clientHeight + window.pageYOffset) >= (document.body.offsetHeight - 100)) {
+      console.log("AT BOTTOM!", state.postLimit, state.postLen);
+      console.log("doc.doc.cliHei", document.documentElement.clientHeight + window.pageYOffset, "doc.bod.offHei", document.body.offsetHeight);
       if (state.postLimit + 2 < state.postLen) {
         state.loadingMore = true;
         // 🚧🚧🚧 simulated api delay need to re-factor whole func when database is added 

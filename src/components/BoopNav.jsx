@@ -81,7 +81,7 @@ const BoopNav = ({users}) => {
         
         {/* center section */}
         <div className="home-link">
-          <i class="fa fa-home" aria-hidden="true"></i>
+          <i className="fa fa-home" aria-hidden="true"></i>
         </div>
         {/* end center section */}
         
@@ -95,20 +95,20 @@ const BoopNav = ({users}) => {
           
           {/* other round links */}
           <div className="other-nav-links">
-            <i class="fa fa-star" aria-hidden="true"></i>
+            <i className="fa fa-star" aria-hidden="true"></i>
           </div>
           
           <div className="other-nav-links">
-            <i class="fa fa-commenting" aria-hidden="true"></i>
+            <i className="fa fa-commenting" aria-hidden="true"></i>
           </div>
           
           {/* notifications */}
           <div className="notification-bell">
-            <i class="fa fa-bell" aria-hidden="true"></i>
+            <i className="fa fa-bell" aria-hidden="true"></i>
           </div>
           
           <div className="other-nav-links me-1">
-            <i class="fa fa-caret-down" aria-hidden="true"></i>
+            <i className="fa fa-caret-down" aria-hidden="true"></i>
           </div>
         </div>
         {/* end right section */}
