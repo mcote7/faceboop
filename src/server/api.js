@@ -1,7 +1,7 @@
 
-// https://my-json-server.typicode.com/mcote7/faceboop_server/users
+// https://jsonplaceholder.typicode.com/users
 export const getAllUsers = () => {
-  return fetch('https://jsonplaceholder.typicode.com/users', {method: 'GET'})
+  return fetch('https://my-json-server.typicode.com/mcote7/faceboop_server/users', {method: 'GET'})
     .then(res => res.json())
     .then(data => {return data})
     .catch(err => console.log("error getting users", err));

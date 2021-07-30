@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import anonUserImg from '../assets/menuIcons/userAnon1.png';
 import mainImg from '../assets/misc/mainMenu.png';
 import contactsImg from '../assets/misc/contacts.png';
+import self from '../assets/misc/self1.jfif';
 
 const BoopNav = ({users}) => {
   
@@ -141,7 +142,9 @@ const BoopNav = ({users}) => {
             searchUsersResult.map((user, idx)=> {
               return(
                 <div key={idx} className="user-contact">
-                  <img src={`https://randomuser.me/api/portraits/thumb/women/${user.id}.jpg`} alt="contact"/>
+                  {user.id === 1 ? 
+                  <img src={self} alt="contact"/> : 
+                  <img src={`https://randomuser.me/api/portraits/thumb/women/${user.id}.jpg`} alt="contact"/>}
                   {user.name}
                 </div>
               );

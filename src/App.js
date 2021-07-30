@@ -22,6 +22,7 @@ const App = () => {
     });
     getAllPost().then(res => {
       shuffleArray(res);
+      addIntroPost(res);
       setPosts(res);
     });
     getAllComments().then(res => {
@@ -47,6 +48,18 @@ const App = () => {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+  };
+  
+  const addIntroPost = (posts) => {
+    let introPost = 
+    {
+      "userId": 1,
+      "id": 0,
+      "title": "more info here",
+      "body": "Hello, welcome to my faceboop!"
+    }
+    posts.unshift(introPost);
+    return posts;
   };
   
   return (

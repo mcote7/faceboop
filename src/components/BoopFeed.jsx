@@ -3,6 +3,7 @@ import anonUserImg from '../assets/menuIcons/userAnon1.png';
 import * as moment from 'moment';
 import * as _ from 'lodash';
 import useRS from "radioactive-state";
+import self from '../assets/misc/self1.jfif';
 
 const BoopFeed = ({users, posts, comments}) => {
 
@@ -76,6 +77,7 @@ const BoopFeed = ({users, posts, comments}) => {
   const randomDate = (start, end) => {
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
   };
+  
   const getNewRandDate = () => {
     const randDate = randomDate(new Date(2012, 0, 1), new Date());
     const target = moment(randDate).format('MMMM D YYYY @ h:mm A');
@@ -118,7 +120,10 @@ const BoopFeed = ({users, posts, comments}) => {
           <div key={idx} className="boop-post">
             
             <div className="post-user">
-              <img src={`https://randomuser.me/api/portraits/thumb/women/${users[post.userId - 1].id}.jpg`} alt="contact"/>
+              {post.userId === 1 ? 
+                <img src={self} alt="contact"/> : 
+                <img src={`https://randomuser.me/api/portraits/thumb/women/${users[post.userId - 1].id}.jpg`} alt="contact"/>}
+                
               <div className="user-title">
                 {users[post.userId - 1].name}
                 <small>{getNewRandDate()} &bull; <i className="fa fa-globe" aria-hidden="true"></i></small>

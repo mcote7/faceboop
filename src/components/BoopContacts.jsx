@@ -1,5 +1,6 @@
 import React from 'react';
 
+import self from '../assets/misc/self1.jfif';
 import { Adverts } from '../config/adverts';
 
 
@@ -57,7 +58,9 @@ const BoopContacts = ({users}) => {
         {users && users.map((user, idx) => {
           return(
             <div key={idx} className="user-contact">
-              <img src={`https://randomuser.me/api/portraits/thumb/women/${user.id}.jpg`} alt="contact"/>
+              {user.id === 1 ?
+                <img src={self} alt="contact"/> : 
+                <img src={`https://randomuser.me/api/portraits/thumb/women/${user.id}.jpg`} alt="contact"/>}
               {user.name}
             </div>
           );
