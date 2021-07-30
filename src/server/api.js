@@ -1,4 +1,5 @@
 
+// https://my-json-server.typicode.com/mcote7/faceboop_server/users
 export const getAllUsers = () => {
   return fetch('https://jsonplaceholder.typicode.com/users', {method: 'GET'})
     .then(res => res.json())
