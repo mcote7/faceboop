@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/faceboop/static/css/main.9b471fb3.chunk.css",
-    "main.js": "/faceboop/static/js/main.88391c66.chunk.js",
-    "main.js.map": "/faceboop/static/js/main.88391c66.chunk.js.map",
+    "main.js": "/faceboop/static/js/main.917a53c3.chunk.js",
+    "main.js.map": "/faceboop/static/js/main.917a53c3.chunk.js.map",
     "runtime-main.js": "/faceboop/static/js/runtime-main.66123d69.js",
     "runtime-main.js.map": "/faceboop/static/js/runtime-main.66123d69.js.map",
     "static/css/2.d1628ef2.chunk.css": "/faceboop/static/css/2.d1628ef2.chunk.css",
@@ -38,13 +38,14 @@
     "static/media/069-linkedin.48addedf.png": "/faceboop/static/media/069-linkedin.48addedf.png",
     "static/media/contacts.a9e0bdb8.png": "/faceboop/static/media/contacts.a9e0bdb8.png",
     "static/media/font-awesome.css": "/faceboop/static/media/fontawesome-webfont.f691f37e.woff",
-    "static/media/mainMenu.5c22b2bf.png": "/faceboop/static/media/mainMenu.5c22b2bf.png"
+    "static/media/mainMenu.5c22b2bf.png": "/faceboop/static/media/mainMenu.5c22b2bf.png",
+    "static/media/self1.b48c34e7.jfif": "/faceboop/static/media/self1.b48c34e7.jfif"
   },
   "entrypoints": [
     "static/js/runtime-main.66123d69.js",
     "static/css/2.d1628ef2.chunk.css",
     "static/js/2.abf3c4f3.chunk.js",
     "static/css/main.9b471fb3.chunk.css",
-    "static/js/main.88391c66.chunk.js"
+    "static/js/main.917a53c3.chunk.js"
   ]
 }
