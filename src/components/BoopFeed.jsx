@@ -223,5 +223,3 @@ const BoopFeed = ({users, posts, comments}) => {
 };
 
 export default BoopFeed;
-
-// test wakaktime
