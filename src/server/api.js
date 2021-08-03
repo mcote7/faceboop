@@ -7,6 +7,10 @@ export const getAllUsers = () => {
     .catch(err => console.log("error getting users", err));
 };
 
+export const postNewUser  = (initialState, data) => {
+  return [...initialState, data];
+};
+
 export const getAllPost = () => {
   return fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET'})
   .then(res => res.json())

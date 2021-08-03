@@ -83,6 +83,12 @@ const BoopFeed = ({users, posts, comments}) => {
     const target = moment(randDate).format('MMMM D YYYY @ h:mm A');
     return target;
   };
+
+  const getNewToday = () => {
+    const now = new Date();
+    const target = moment(now).format('MMMM D YYYY @ h:mm A');
+    return target;
+  };
   
   const getRandomInt = () => {
     return Math.floor(Math.random() * 99);
@@ -126,7 +132,10 @@ const BoopFeed = ({users, posts, comments}) => {
                 
               <div className="user-title">
                 {users[post.userId - 1].name}
-                <small>{getNewRandDate()} &bull; <i className="fa fa-globe" aria-hidden="true"></i></small>
+                {post.id === 0 ? 
+                <small>{getNewToday()} &bull; <i className="fa fa-globe" aria-hidden="true"></i></small>
+                :
+                <small>{getNewRandDate()} &bull; <i className="fa fa-globe" aria-hidden="true"></i></small>}
               </div>
             </div>
             

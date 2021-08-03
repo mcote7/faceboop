@@ -1,14 +1,37 @@
 import React from 'react';
-
+import { postNewUser } from '../server/api';
+import faker from 'faker';
 import self from '../assets/misc/self1.jfif';
 import { Adverts } from '../config/adverts';
 
 
-const BoopContacts = ({users}) => {
+const BoopContacts = ({users, setUsers}) => {
 
   const hideContacts = (e) => {
     const target = document.getElementById('contacts-menu');
     target.classList.remove('show-contacts');
+  };
+
+
+  const addNewUser = () => {
+    let id = users.length + 1;
+    let data = {
+      "id": id,
+      "name": `${faker.name.firstName()} ${faker.name.lastName()}`
+    }
+    let newUser = postNewUser(users, data);
+    setUsers(newUser);
+    console.log("new user?", data)
+  };
+
+  const getRandomGender = () => {
+    let newRand =  Math.floor(Math.random() * 2) + 1;
+    console.log("new rand 1 | 2", newRand)
+    if(newRand === 1) {
+      return 'men';
+    } else if(newRand === 2) {
+      return 'women';
+    }
   };
 
   return (
@@ -44,7 +67,7 @@ const BoopContacts = ({users}) => {
         <p>Contacts</p>
         
         <div className="contacts-options">
-          <div className="new-room"><i className="fa fa-video-camera" aria-hidden="true"></i></div>
+          <div onClick={()=>addNewUser()} className="new-room"><i className="fa fa-video-camera" aria-hidden="true"></i></div>
           <div className="search-messages"><i className="fa fa-search" aria-hidden="true"></i></div>
           <div className="options">
             <div className="dot"></div>
@@ -60,7 +83,7 @@ const BoopContacts = ({users}) => {
             <div key={idx} className="user-contact">
               {user.id === 1 ?
                 <img src={self} alt="contact"/> : 
-                <img src={`https://randomuser.me/api/portraits/thumb/women/${user.id}.jpg`} alt="contact"/>}
+                <img src={`https://randomuser.me/api/portraits/thumb/${getRandomGender()}/${user.id}.jpg`} alt="contact"/>}
               {user.name}
             </div>
           );

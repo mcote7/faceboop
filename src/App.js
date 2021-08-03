@@ -72,7 +72,7 @@ const App = () => {
         
         <BoopFeed users={users} posts={posts} comments={comments}/>
         
-        <BoopContacts users={users}/>
+        <BoopContacts users={users} setUsers={setUsers}/>
         
       </div>
     </div>
