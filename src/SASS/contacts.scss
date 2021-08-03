@@ -209,7 +209,8 @@
     
     // mapped user =>
     .user-contact {
-      cursor: pointer;
+      display: flex;
+      align-items: center;
       font-size: .9rem;
       font-weight: 600;
       color: $boopPrimaryTextColor;
@@ -220,6 +221,9 @@
       &:hover {
         background-color: $boopItemHoverTrans;
         box-shadow: 0 0 0 .5rem $boopItemHoverTrans;
+        .remove-user {
+          opacity: 0.5;
+        }
       }
       
       img {
@@ -227,6 +231,33 @@
         width: 2.25rem;
         border-radius: 50%;
         margin-right: .75rem;
+      }
+      
+      .remove-user {
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: transparent;
+        margin-left: auto;
+        opacity: 0;
+        transition: .15s;
+        
+        &:hover {
+          cursor: pointer;
+          background-color: $boopSecondaryButtonBackground;
+          opacity: 1;
+        }
+        
+        i {
+          height: 1.5rem;
+          width: 1.5rem;
+          font-size: 1.5rem;
+          color: $boopSecondaryTextColor;
+        }
       }
     }
   }

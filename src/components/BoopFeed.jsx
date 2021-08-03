@@ -120,7 +120,7 @@ const BoopFeed = ({users, posts, comments}) => {
         </div>
       </div>
       
-      {!state.loading && posts.map((post, idx)=> {
+      {!state.loading && posts && posts.map((post, idx)=> {
         return(
           idx < state.postLimit ?
           <div key={idx} className="boop-post">
@@ -128,10 +128,16 @@ const BoopFeed = ({users, posts, comments}) => {
             <div className="post-user">
               {post.userId === 1 ? 
                 <img src={self} alt="contact"/> : 
-                <img src={`https://randomuser.me/api/portraits/thumb/women/${users[post.userId - 1].id}.jpg`} alt="contact"/>}
+                <img src={`https://randomuser.me/api/portraits/thumb/women/${post.userId}.jpg`} alt="contact"/>}
                 
               <div className="user-title">
-                {users[post.userId - 1].name}
+                {users.map(user => {
+                  if(user.id === post.userId) {
+                    return user.name;
+                  } else {
+                    return null;
+                  }
+                })}
                 {post.id === 0 ? 
                 <small>{getNewToday()} &bull; <i className="fa fa-globe" aria-hidden="true"></i></small>
                 :
@@ -225,8 +231,8 @@ const BoopFeed = ({users, posts, comments}) => {
           </div> : ''
         );
       })}
-      {state.loadingMore ? <div className="loading-feed mt-5"><i className="fa fa-spinner fa-5x" aria-hidden="true"></i></div> : ''}
-      {state.loading ? <div className="loading-feed mt-5"><i className="fa fa-spinner fa-5x" aria-hidden="true"></i></div> : ''}
+      {state.loading || state.loadingMore ? 
+      <div className="loading-feed mt-5"><i className="fa fa-spinner fa-5x" aria-hidden="true"></i></div> : ''}
     </div>
   );
 };
